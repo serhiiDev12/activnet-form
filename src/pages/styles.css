@@ -1,0 +1,79 @@
+
+nav {
+    background: white;
+    width: 100%;
+    top: 0;
+    gap: 45px;
+    margin: auto;
+    padding: 25px 40px;
+    display: flex;
+    position: fixed;
+    top: 0;
+    z-index: 999;
+    background: white;
+}
+
+nav a {
+    color: #333;
+    text-decoration: none;
+    line-height: 30px;
+    font-size: 18px;
+    font-weight: 300;
+    transition: 0.3s;
+}
+
+nav a:hover {
+    color: #4FAA89;
+    text-decoration: none;
+    line-height: 30px;
+    font-size: 18px;
+}
+.flex {
+    margin-top: 80px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 24px;
+    justify-content: space-between;
+    justify-items: center;
+    background: #fafafa;
+}
+.form {
+    overflow-y: auto;
+    flex: 1;
+    color: #104B31;
+    font-family: Inter;
+    position: sticky;
+    top: 0;
+}
+.website-preview {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+}
+.preview {
+    overflow-y: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    -webkit-box-shadow: 0px 0px 63px -52px rgba(0,0,0,0.75);
+    -moz-box-shadow: 0px 0px 63px -52px rgba(0,0,0,0.75);
+    box-shadow: 0px 0px 63px -52px rgba(0,0,0,0.75);
+
+}
+.color-picker-placeholder {
+    position: sticky;
+    height: 150px;
+    width: 100%;
+    background: white;
+    bottom: 0;
+    -webkit-box-shadow: inset 0px 0px 63px -52px rgba(0,0,0,0.75);
+    -moz-box-shadow: inset 0px 0px 63px -52px rgba(0,0,0,0.75);
+    box-shadow: inset 0px 0px 63px -52px rgba(0,0,0,0.75);
+}
+.template {
+    max-width: 55vw;
+}
+.header {
+    font-size: 35px;
+    font-weight: 800;
+}
