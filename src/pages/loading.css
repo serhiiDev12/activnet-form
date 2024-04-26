@@ -1,0 +1,19 @@
+.loading {
+    position: absolute;
+    top: 0;
+    width: 100%;
+    z-index: 9999;
+    background: white;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.contered-loading {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+.contered-loading img {
+    margin: auto;
+}

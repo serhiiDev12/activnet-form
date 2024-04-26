@@ -3,6 +3,8 @@ import InquiryForm from "./pages/InquiryForm";
 import logo from './logo.svg'
 import {Provider} from "react-redux";
 import {store} from './store'
+import {Link, RouterProvider} from "react-router-dom";
+import {router} from "./router";
 
 function App() {
   return (
@@ -10,10 +12,8 @@ function App() {
           <div className="App">
               <nav>
                   <img className="activnet" src={logo} alt="ActivNet"/>
-                  <a href="#about">Back to main menu</a>
-                  <a href="#features">FAQ</a>
               </nav>
-              <InquiryForm/>
+              <RouterProvider router={router} />
           </div>
       </Provider>
   );

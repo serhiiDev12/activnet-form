@@ -6,6 +6,8 @@ import { changeValue } from "../store";
 import {useState, useEffect} from "react";
 import {useDispatch, useSelector} from "react-redux";
 import {sendOrder} from "../service";
+import {useNavigate} from "react-router-dom";
+import Loading from "./Loading";
 function validPhoneInputCharacter(input) {
     let keyCode = input.keyCode;
 
@@ -27,12 +29,29 @@ export default function InquiryForm() {
     const [emailInvalid, setEmailInvalid] = useState(false);
     const [phoneInvalid, setPhoneInvalid] = useState(false);
     const [listOfInvalidFields, setListOfInvalidFields] = useState([]);
+    const [showLoading, setShowLoading] = useState(true)
+    let navigate = useNavigate();
+
+    useEffect( () => {
+        setShowLoading(true);
+        setTimeout(() => {
+            setShowLoading(false)
+        }, 500)
+    }, [navigate])
+
+    const goHome = () => {
+        navigate('/')
+    }
 
     const stepNext = () => {
+        if (listOfInvalidFields.length > 0)
+            validateForm()
         setStep(step + 1);
     }
 
     const stepBack = () => {
+        if (listOfInvalidFields.length > 0)
+            validateForm()
         setStep(step - 1);
     }
 
@@ -68,27 +87,39 @@ export default function InquiryForm() {
         return !group.fields.find(item => item.id === fieldId).value
     }
 
-    const onSendOrder = () => {
+    const onSendOrder = async () => {
         if (emailInvalid || phoneInvalid) {
             return;
         }
-        console.log(validateForm())
         if (validateForm()) {
-            sendOrder(orderForm)
+            setShowLoading(true)
+            const statusOk = await sendOrder(orderForm);
+            setShowLoading(false)
         }
     }
 
     return (
-        <div className="flex">
-            <Box
-                component="form"
-                className="form"
-                spacing={4}
-                sx={{
-                    display: "block",
-                    p: 2,
-                    gap: 2
-                }}
+        <>
+            {
+                showLoading &&
+                <Loading />
+            }
+            <header>
+                <nav>
+                    <img className="activnet" src="./logo.svg" alt="ActivNet" onClick={goHome}/>
+                    <a onClick={goHome}>HOME</a>
+                </nav>
+            </header>
+    <div className="flex">
+        <Box
+            component="form"
+            className="form"
+            spacing={4}
+            sx={{
+                display: "block",
+                p: 2,
+                gap: 2
+            }}
             >
                 <h1 className="header">Help us identify your needs</h1>
                 <div>
@@ -210,9 +241,12 @@ export default function InquiryForm() {
                 </div>
                 <div className="stepper">
                     <Button onClick={stepBack} disabled={step === 0}>Back</Button>
-                    <Button variant="contained" onClick={stepNext} disabled={step === orderForm.length -1 }>Next</Button>
+                    {
+                        step === orderForm.length -1 ?
+                            <Button variant="contained" className="submit" onClick={onSendOrder} disabled={emailInvalid || phoneInvalid}>Submit</Button>
+                            : <Button variant="contained" onClick={stepNext}>Next</Button>
+                    }
                 </div>
-                <Button variant="contained" className="submit" onClick={onSendOrder} disabled={emailInvalid || phoneInvalid}>Submit</Button>
 
                 {listOfInvalidFields.length > 0 &&
                     <div>
@@ -236,5 +270,6 @@ export default function InquiryForm() {
             </div>
         </div>
 
+        </>
     );
 }

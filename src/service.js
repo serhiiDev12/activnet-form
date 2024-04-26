@@ -15,7 +15,7 @@ const orderToHtml = (orderArray) => {
 
 export const sendOrder = async (order) => {
     console.log()
-    await fetch('https://ykvqioxa6d.execute-api.us-east-2.amazonaws.com/default/orderReceived', {
+    return await fetch('https://ykvqioxa6d.execute-api.us-east-2.amazonaws.com/default/orderReceived', {
         method: "POST",
         mode: "no-cors",
         cache: "no-cache",
@@ -25,5 +25,5 @@ export const sendOrder = async (order) => {
         },
         referrerPolicy: "no-referrer",
         body: orderToHtml(order)
-    })
+    }).then(res => res.data)
 }
