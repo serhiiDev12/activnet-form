@@ -4,13 +4,13 @@ body {
     display: inline-flex;
     flex-direction: column;
     margin: 0;
-    background-repeat: no-repeat;
-    background-attachment: fixed;
-    background-size: cover;
     width: 100%;
 }
 .wrapper {
     background-image: url("../../public/unsplash_psGV5KhidlY.png");
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
 }
 
 header {

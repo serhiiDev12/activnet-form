@@ -104,7 +104,7 @@ export default function MainPage() {
                             <p>Once done, we'll send you our monthly plan and you proceed with your website right away</p>
                             <p>After all steps done you're free to order Google sponsorship and other ways to promote your business</p>
                             <p>Even if you have other questions please let us know</p>
-                            <a className="mui-button contact-button">GET STARTED</a>
+                            <a className="mui-button contact-button" onClick={startWebsiteCreate}>GET STARTED</a>
                         </div>
                     </div>
                 </section>
@@ -138,7 +138,7 @@ export default function MainPage() {
                             <p className="variable-price">Price depends on work to be done</p>
                         </div>
                     </div>
-                    <a className="mui-button button-primary">GET WEBSITE NOW!!</a>
+                    <a className="mui-button button-primary" onClick={startWebsiteCreate}>GET WEBSITE NOW!!</a>
                 </section>
                 <footer>
                     <div className="flex-box">

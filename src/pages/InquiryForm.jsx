@@ -31,7 +31,9 @@ export default function InquiryForm() {
     const [listOfInvalidFields, setListOfInvalidFields] = useState([]);
     const [showLoading, setShowLoading] = useState(true)
     let navigate = useNavigate();
-
+    useEffect(() => {
+        window.scrollTo(0, 0);
+    }, [navigate]);
     useEffect( () => {
         setShowLoading(true);
         setTimeout(() => {
