@@ -8,6 +8,7 @@ import {useDispatch, useSelector} from "react-redux";
 import {sendOrder} from "../service";
 import {useNavigate} from "react-router-dom";
 import Loading from "./Loading";
+import TemplateOne from "../websites/template1/TemplateOne";
 function validPhoneInputCharacter(input) {
     let keyCode = input.keyCode;
 
@@ -265,7 +266,9 @@ export default function InquiryForm() {
                 <div className="preview-label">
                     <h3>Website preview</h3>
                 </div>
-                <div className="preview"><img className="template" src={img} alt=""/></div>
+                <div className="preview">
+                    <TemplateOne />
+                </div>
                 <div className="color-picker-placeholder">
                     <div className="color-picker"></div>
                 </div>
