@@ -10,9 +10,6 @@ function App() {
   return (
       <Provider store={store}>
           <div className="App">
-              <nav>
-                  <img className="activnet" src={logo} alt="ActivNet"/>
-              </nav>
               <RouterProvider router={router} />
           </div>
       </Provider>

@@ -11,14 +11,15 @@ const Testimonials = () => (
             <div className="testemonial">
                 <div className="account">
                     <div className="mainreview">
-                        <Avatar/>
+                        <Avatar
+                            sx={{ width: 60, height: 60 }}/>
                         <div>
                             <p className="account-name">Sophia Doe</p>
+                            <Rating name="read-only" value={5} readOnly className="rating"/>
                         </div>
                     </div>
                     <div className="review-text">
-                        <Rating name="read-only" value={5} readOnly className="rating"/>
-                        <p> Et eligendi Accusantium qui est eius nemo...</p>
+                        <p>Et eligendi expedita. Accusantium qui est eius nemo eaque dolore necessitatibus voluptatem....</p>
                     </div>
                     <div className="time-stamp">
                         <p>Posted on Google 1 day ago</p>
@@ -28,14 +29,15 @@ const Testimonials = () => (
             <div className="testemonial">
                 <div className="account">
                     <div className="mainreview">
-                        <Avatar/>
+                        <Avatar
+                            sx={{ width: 60, height: 60 }}/>
                         <div>
                             <p className="account-name">Sophia Doe</p>
+                            <Rating name="read-only" value={5} readOnly className="rating"/>
                         </div>
                     </div>
                     <div className="review-text">
-                        <Rating name="read-only" value={5} readOnly className="rating"/>
-                        <p> Et eligendi Accusantium qui est eius nemo...</p>
+                        <p> Et eligendi expedita. Accusantium qui est eius nemo eaque dolore necessitatibus voluptatem....</p>
                     </div>
                     <div className="time-stamp">
                         <p>Posted on Google 1 day ago</p>
@@ -45,14 +47,15 @@ const Testimonials = () => (
             <div className="testemonial">
                 <div className="account">
                     <div className="mainreview">
-                        <Avatar/>
+                        <Avatar
+                            sx={{ width: 60, height: 60 }}/>
                         <div>
                             <p className="account-name">Sophia Doe</p>
+                            <Rating name="read-only" value={5} readOnly className="rating"/>
                         </div>
                     </div>
                     <div className="review-text">
-                        <Rating name="read-only" value={5} readOnly className="rating"/>
-                        <p> Et eligendi Accusantium qui est eius nemo...</p>
+                        <p>Et eligendi expedita. Accusantium qui est eius nemo eaque dolore necessitatibus voluptatem....</p>
                     </div>
                     <div className="time-stamp">
                         <p>Posted on Google 1 day ago</p>

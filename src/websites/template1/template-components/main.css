@@ -3,10 +3,10 @@
 }
 h3 {
     color: #00838F;
-    font-size: 14px;
+    font-size: 18px;
 }
 p {
-    font-size: 12px;
+    font-size: 14px;
     text-align: left;
     color: #5C7481;
 }
@@ -14,8 +14,13 @@ p {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
-    padding: 12px 30px 12px 30px;
+    padding: 15px 60px 15px 60px;
     background: white;
+    position: fixed;
+    left: 0;
+    top: 0;
+    right: 0;
+    z-index: 9999999;
 }
 .navbar .left {
     display: flex;
@@ -28,11 +33,11 @@ p {
     display: flex;
     flex-direction: row;
     align-items: center;
-    gap: 12px;
+    gap: 75px;
 }
 
 .navbar a {
-    font-size: 12px;
+    font-size: 16px;
     font-weight: 600;
     color: #222A2E;
     text-decoration: none;
@@ -44,12 +49,12 @@ p {
 }
 
 .navbar h3 {
-    font-size: 16px;
+    font-size: 18px;
     color: #00838F;
 }
 
 .navbar h4 {
-    font-size: 14px;
+    font-size: 16px;
     color: #00838F;
 }
 
@@ -59,7 +64,7 @@ p {
 
 .image-withHeader {
     background-image: url('https://images.unsplash.com/photo-1569161238483-4c6375c59d68?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D');
-    height: 300px;
+    height: 600px;
     background-size: cover;
     background-position: center;
 }
@@ -67,22 +72,22 @@ p {
 .overlap {
     background: #00838F;
     opacity: 0.9;
-    height: 200px;
-    width: 40%;
+    margin-top: 400px;
+    width: 80.2vw;
     position: absolute;
-    margin-top: 109px;
     right: 0;
     text-align: left;
+    padding-bottom: 40px;
 }
 .overlap h1 {
     color: white;
-    font-size: 30px;
+    font-size: 35px;
     width: fit-content;
     margin-left: 20px;
     margin-bottom: 0;
 }
 .overlap p {
-    font-size: 18px;
+    font-size: 20px;
     font-weight: 300;
     color: white;
     width: fit-content;
@@ -116,17 +121,21 @@ p {
 .about-transcript h4 {
     margin: 0;
     margin-bottom: 12px;
+    font-size: 18px;
+}
+.about-transcript p {
     font-size: 16px;
+    text-align: left;
 }
 
 .services {
     background: white;
-    padding: 20px;
+    padding: 60px;
     padding-bottom: 30px;
 }
 .services h4 {
     color: #00838F;
-    font-size: 14px;
+    font-size: 16px;
 }
 
 .flexbox-services {
@@ -139,28 +148,30 @@ p {
     flex-direction: column;
     align-items: flex-start;
     text-align: left;
-    padding: 0 12px 0 12px;
+    padding: 0 16px 0 16px;
 }
 .service h6 {
     margin-bottom: 10px;
-    font-size: 13px;
+    font-size: 18px;
 }
 .service p {
     font-family: "DM Sans", sans-serif;
-    font-size: 13px;
+    font-size: 16px;
     text-align: left;
 }
 .portfolio {
     background: #fafafa;
     display: flex;
     flex-direction: column;
-    padding: 20px;
+    padding: 60px;
 }
 .portfolio h3 {
     width: fit-content;
 }
 .portfolio p {
     text-align: left;
+    margin-top: 0;
+    margin-bottom: 35px;
 }
 .portfolio-grid {
     display: flex;
@@ -172,7 +183,8 @@ p {
 .portfolio-item {
     flex: 1;
     flex-basis: 40%;
-    height: 250px;
+    height: 450px;
+    width: 450px;
     background-image: url("https://plus.unsplash.com/premium_photo-1680632913180-58542119bc99?q=80&w=1976&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D");
     background-repeat: no-repeat;
     background-size: cover;
@@ -200,24 +212,25 @@ p {
 
 .whyus {
     display: flex;
-    padding: 20px;
+    padding: 60px;
+    justify-content: space-between;
     background: #fafafa;
 }
 
 .whyus-child {
     flex: 1;
+
 }
 .left-whyus {
     flex: 1;
     text-align: end;
-    margin-top: 20px;
 }
 .left-whyus h3 {
     color: #00838F;
-    font-size: 16px;
+    font-size: 20px;
 }
 .left-whyus p {
-    font-size: 12px;
+    font-size: 16px;
     text-align: end;
 }
 
@@ -229,14 +242,14 @@ p {
 
 .quality {
     flex: 1;
-    flex-basis: calc(50% - 40px);
+    flex-basis: calc(50% - 60px);
     background-color: #00646D;
     padding: 10px;
 }
 
 .quality h4 {
     text-align: center;
-    font-size: 12px;
+    font-size: 18px;
     color: white;
     font-weight: 400;
     margin-top: 0;
@@ -244,14 +257,14 @@ p {
 
 .quality p {
     text-align: center;
-    font-size: 10px;
+    font-size: 15px;
     color: white;
     font-weight: 300;
 }
 
 .right-whyus {
-    width: 50%;
-    height: 350px;
+    width: 40%;
+    height: 420px;
     background-image: url("https://images.unsplash.com/photo-1583719444774-9d5d7fa2c2dc?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTl8fGNvZmZlZSUyMG1lbnV8ZW58MHx8MHx8fDA%3D");
     background-size: cover;
     background-position: center;
@@ -263,32 +276,33 @@ p {
 }
 
 .company-numbers h3 {
-    padding: 0 20px 0 20px;
+    padding: 0 60px 0 60px;
 }
 .company-numbers p {
     text-align: left;
-    padding: 0 20px 0 20px;
+    padding: 0 60px 0 60px;
 }
 
 .company-numbers-grid {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
-    padding: 0 20px 20px 20px;
+    padding: 30px 60px 45px 60px;
     background: white;
+    align-items: center;
 }
 .company-number {
     color: #00838F;
 }
 
 .company-number h1 {
-    font-size: 30px;
+    font-size: 50px;
     font-weight: 300;
 
 }
 
 .company-number p {
-    font-size: 12px;
+    font-size: 18px;
 }
 
 .dot {
@@ -302,6 +316,7 @@ p {
 }
 .partners {
     background-color: #fafafa;
+    align-items: center;
 }
 .partner {
     color: #b2b2b2;
@@ -309,9 +324,10 @@ p {
 }
 
 .testemonials {
-    margin-top: 80px;
-    margin-left: 20px;
-    margin-right: 20px;
+    background-color: #fafafa;
+    padding-top: 80px;
+    padding-left: 60px;
+    padding-right: 60px;
     text-align: left;
 }
 
@@ -323,30 +339,41 @@ p {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
+    margin-top: 40px;
+    padding-bottom: 40px;
+    gap: 20px;
+    justify-content: center;
 }
 
 .testemonial {
-    background-color: #fafafa;
-    padding: 10px;
+    background-color: white;
+    padding: 20px;
     border-radius: 6px;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-    width: 200px;
-    height: 150px;
+    width: 350px;
 }
-
+.review-text p {
+    font-size: 16px;
+    color: black;
+}
 .mainreview {
     display: flex;
     gap: 10px;
+    align-items: center;
+}
+.mainreview p {
+    margin-bottom: 0;
+    margin-top: 0;
 }
 
 .account-name {
-    font-size: 10px;
+    font-size: 16px;
     color: black;
     font-weight: 500;
 }
 
 .location {
-    padding: 20px;
+    padding: 60px;
 }
 .location-info {
     display: flex;
@@ -358,17 +385,18 @@ p {
     align-items: center;
     gap: 10px;
 }
-.google-maps {
 
-}
 .map {
     width: 100%;
     border: none;
 }
 .footer-template {
+    padding-top: 5px;
     width: 100%;
     background-color: #00838F;
     color: white;
+    font-size: 16px;
+    padding-bottom: 10px;
 }
 .footer-template a {
     color: white;

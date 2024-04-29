@@ -52,8 +52,14 @@ nav a:hover {
 }
 .form h3 {
     text-align: center;
-    color: #777777;
-    font-weight: 300;
+    color: #104B31;
+    font-weight: 400;
+    font-size: 18px;
+}
+.form p {
+    margin-bottom: 20px;
+    font-weight: 400;
+    font-size: 14px;
 }
 .website-preview {
     flex: 1;
@@ -110,4 +116,8 @@ nav a:hover {
     text-decoration: none;
     list-style: none;
     text-align: left;
+}
+
+.website-preview-frame {
+    width: 100%;
 }
