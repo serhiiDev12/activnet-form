@@ -1,8 +1,23 @@
+
+.color-picker {
+    position: sticky;
+    height: 150px;
+    width: 100%;
+    background: white;
+    bottom: 0;
+    -webkit-box-shadow: inset 0px 0px 63px -52px rgba(0,0,0,0.75);
+    -moz-box-shadow: inset 0px 0px 63px -52px rgba(0,0,0,0.75);
+    box-shadow: inset 0px 0px 63px -52px rgba(0,0,0,0.75);
+}
+.flex-wrap {
+    align-items: center;
+    height: 100%;
+}
 .template-one {
     font-family: Libre Franklin;
 }
 h3 {
-    color: #00838F;
+    color: var(--primary-color);
     font-size: 18px;
 }
 p {
@@ -45,17 +60,17 @@ p {
 }
 
 .navbar a:hover {
-    color: #00838F;
+    color: var(--primary-color);
 }
 
 .navbar h3 {
     font-size: 18px;
-    color: #00838F;
+    color: var(--primary-color);
 }
 
 .navbar h4 {
     font-size: 16px;
-    color: #00838F;
+    color: var(--primary-color);
 }
 
 .header {
@@ -70,7 +85,7 @@ p {
 }
 
 .overlap {
-    background: #00838F;
+    background: var(--primary-color);
     opacity: 0.9;
     margin-top: 400px;
     width: 80.2vw;
@@ -97,10 +112,10 @@ p {
 
 .header-button {
     background: white;
-    border: 1px solid #00838F;
+    border: 1px solid var(--primary-color);
     padding: 12px 18px;
     margin-left: 20px;
-    color: #00838F;
+    color: var(--primary-color);
 }
 
 .about-page-template {
@@ -111,11 +126,11 @@ p {
 }
 .about-transcript {
     margin-top: 35px;
-    border-left: 2px solid #00838F;
+    border-left: 2px solid var(--primary-color);
     width: 79%;
     text-align: left;
     padding: 15px;
-    color: #00838F;
+    color: var(--primary-color);
 
 }
 .about-transcript h4 {
@@ -134,7 +149,7 @@ p {
     padding-bottom: 30px;
 }
 .services h4 {
-    color: #00838F;
+    color: var(--primary-color);
     font-size: 16px;
 }
 
@@ -197,7 +212,7 @@ p {
 }
 
 .arrow {
-    background-color: #00838F;
+    background-color: var(--primary-color);
     color: white;
     padding: 10px 0 10px 0;
     opacity: 0.9;
@@ -226,7 +241,7 @@ p {
     text-align: end;
 }
 .left-whyus h3 {
-    color: #00838F;
+    color: var(--primary-color);
     font-size: 20px;
 }
 .left-whyus p {
@@ -243,7 +258,7 @@ p {
 .quality {
     flex: 1;
     flex-basis: calc(50% - 60px);
-    background-color: #00646D;
+    background-color: var(--primary-color);
     padding: 10px;
 }
 
@@ -292,7 +307,7 @@ p {
     align-items: center;
 }
 .company-number {
-    color: #00838F;
+    color: var(--primary-color);
 }
 
 .company-number h1 {
@@ -308,7 +323,7 @@ p {
 .dot {
     width: 8px;
     height: 8px;
-    background: #00838F;
+    background: var(--primary-color);
     border-radius: 50%;
     margin: auto;
     margin-left: 0;
@@ -393,7 +408,7 @@ p {
 .footer-template {
     padding-top: 5px;
     width: 100%;
-    background-color: #00838F;
+    background-color: var(--primary-color);
     color: white;
     font-size: 16px;
     padding-bottom: 10px;

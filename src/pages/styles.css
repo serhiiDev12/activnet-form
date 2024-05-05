@@ -71,17 +71,6 @@ nav a:hover {
     -webkit-box-shadow: 0px 0px 63px -52px rgba(0,0,0,0.75);
     -moz-box-shadow: 0px 0px 63px -52px rgba(0,0,0,0.75);
     box-shadow: 0px 0px 63px -52px rgba(0,0,0,0.75);
-
-}
-.color-picker-placeholder {
-    position: sticky;
-    height: 100px;
-    width: 100%;
-    background: white;
-    bottom: 0;
-    -webkit-box-shadow: inset 0px 0px 63px -52px rgba(0,0,0,0.75);
-    -moz-box-shadow: inset 0px 0px 63px -52px rgba(0,0,0,0.75);
-    box-shadow: inset 0px 0px 63px -52px rgba(0,0,0,0.75);
 }
 .template {
     max-width: 55vw;
@@ -106,10 +95,11 @@ nav a:hover {
     width: 50%;
 }
 
-.preview-label {
+.preview-label h3 {
     color: #104B31;
     border-bottom: 1px solid #104B31;
-    margin-bottom: 10px;
+    margin-bottom: 18px;
+    padding-bottom: 15px;
 }
 .error {
     color: red;
@@ -120,4 +110,22 @@ nav a:hover {
 
 .website-preview-frame {
     width: 100%;
+}
+.flex-wrap {
+    display: flex;
+    justify-content: space-between;
+    margin: 0 20px 0 20px;
+    .color {
+        border-radius: 50%;
+        height: 50px;
+        width: 50px;
+        cursor: pointer;
+    }
+    .bordered {
+        border: 1px solid black;
+    }
+}
+.floating-button {
+    position: absolute;
+    bottom: 190px;
 }

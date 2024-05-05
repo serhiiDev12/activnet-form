@@ -3,6 +3,8 @@ import './mainStyles.css'
 import { useNavigate } from "react-router-dom";
 import {useEffect, useState} from "react";
 import Loading from "./Loading";
+import {Timeline, TimelineConnector, TimelineContent, TimelineDot, TimelineItem, TimelineSeparator} from "@mui/lab";
+import {AccessTime, Edit, InsertDriveFile, Send, TagFaces, Web} from "@mui/icons-material";
 
 export default function MainPage() {
     const [showLoading, setShowLoading] = useState(true)
@@ -94,16 +96,58 @@ export default function MainPage() {
                 <section id="how-to-create">
                     <div className="how-to-div">
                         <div className="icon-list">
-                            <img src="./HowItWorks.svg" alt="" />
+                            <Timeline position="left">
+                                <TimelineItem>
+                                    <TimelineSeparator>
+                                        <Web sx={{width: 35, height: 35}} color="success" />
+                                        <TimelineConnector />
+                                    </TimelineSeparator>
+                                    <TimelineContent>Select a Template or press Get Started</TimelineContent>
+                                </TimelineItem>
+                                <TimelineItem>
+                                    <TimelineSeparator>
+                                        <Edit sx={{width: 35, height: 35}} color="success" />
+                                        <TimelineConnector />
+                                    </TimelineSeparator>
+                                    <TimelineContent>Use form to adjust you template</TimelineContent>
+                                </TimelineItem>
+                                <TimelineItem>
+                                    <TimelineSeparator>
+                                        <InsertDriveFile sx={{width: 35, height: 35}} color="success" />
+                                        <TimelineConnector />
+                                    </TimelineSeparator>
+                                    <TimelineContent>Fill up all information</TimelineContent>
+                                </TimelineItem>
+                                <TimelineItem>
+                                    <TimelineSeparator>
+                                        <Send sx={{width: 35, height: 35}} color="success" />
+                                        <TimelineConnector />
+                                    </TimelineSeparator>
+                                    <TimelineContent>Send from</TimelineContent>
+                                </TimelineItem>
+                                <TimelineItem>
+                                    <TimelineSeparator>
+                                        <AccessTime sx={{width: 35, height: 35}} color="success" />
+                                        <TimelineConnector />
+                                    </TimelineSeparator>
+                                    <TimelineContent>Wait for email confirmation of the website</TimelineContent>
+                                </TimelineItem>
+                                <TimelineItem>
+                                    <TimelineSeparator>
+                                        <TagFaces sx={{width: 35, height: 35}} color="success" />
+                                    </TimelineSeparator>
+                                    <TimelineContent>ENJOY!!</TimelineContent>
+                                </TimelineItem>
+                            </Timeline>
                         </div>
                         <div className="text-div">
                             <h2>How to get your website?</h2>
-                            <p>First you need to contact us with an email and tell us details about your business</p>
-                            <p>In the email include you business name, type, and short description about what you do</p>
-                            <p>Then we'll confirm your order and you will be directed to our designer, she will send you couple of our ready templates or you can proceed with your custom design</p>
-                            <p>Once done, we'll send you our monthly plan and you proceed with your website right away</p>
-                            <p>After all steps done you're free to order Google sponsorship and other ways to promote your business</p>
-                            <p>Even if you have other questions please let us know</p>
+                            <p>You can send an inquiry by filling up one of the forms, either custom design order or via template selector</p>
+                            <p>We'll receive your order and start working on it, usually ready landing page takes arround 1 day to be produced</p>
+                            <p>Then you should be expecting an email with results, this result will be hosted on our domain</p>
+                            <p>If you wish to make some changes, just reply this email with changes you want</p>
+                            <p>After you satisfied with your brand new website, we'll send you an invoice that will automatically charge a monthly subscription after 15 day period</p>
+                            <p>Still you're our client and client should have the best, that's why your monthly subscription includes changes you wish to make through whole website life</p>
                             <a className="mui-button contact-button" onClick={startWebsiteCreate}>GET STARTED</a>
                         </div>
                     </div>

@@ -9,6 +9,7 @@ import {sendOrder} from "../service";
 import {useNavigate} from "react-router-dom";
 import Loading from "./Loading";
 import logo from "../logo.svg";
+import ColorPicker from "../components/ColorPicker";
 
 function validPhoneInputCharacter(input) {
     let keyCode = input.keyCode;
@@ -78,7 +79,8 @@ export default function InquiryForm() {
     const onLoad = () => {
         setTimeout(() => {
 
-            setScrollHeight(ref.current.contentWindow.document.body.scrollHeight + 'px')
+            console.log(window.innerHeight, {data: window.innerHeight})
+            setScrollHeight(window.innerHeight -195 + 'px')
         }, 0)
     }
 
@@ -113,7 +115,7 @@ export default function InquiryForm() {
     }
 
     const openTemplate = () => {
-        navigate('/order-website/template/false');
+        navigate('/order-website/templateTwo/false');
     }
 
     return (
@@ -266,9 +268,14 @@ export default function InquiryForm() {
                         <Button onClick={stepBack} disabled={step === 0}>Back</Button>
                         {
                             step === orderForm.length - 1 ?
-                                <Button variant="contained" className="submit" onClick={onSendOrder}
+                                <Button variant="contained"
+                                        className="submit"
+                                        onClick={onSendOrder}
+                                        sx={{backgroundColor: "#4FAA89"}}
                                         disabled={emailInvalid || phoneInvalid}>Submit</Button>
-                                : <Button variant="contained" onClick={stepNext}>Next</Button>
+                                : <Button variant="contained"
+                                          sx={{backgroundColor: "#4FAA89"}}
+                                          onClick={stepNext}>Next</Button>
                         }
                     </div>
 
@@ -292,15 +299,17 @@ export default function InquiryForm() {
                             ref={ref}
                             id="frame"
                             className="website-preview-frame"
-                            src="http://localhost:3000/order-website/template/true"
+                            src="http://localhost:3000/order-website/templateTwo/true"
                             frameBorder={0}
                             height={scrollHeight}
                             onLoad={onLoad}></iframe>
-                    </div>
-                    <div className="color-picker-placeholder">
-                        <div className="color-picker">
-                            <Button onClick={openTemplate}>View Website</Button>
-                        </div>
+                        <Button
+                            variant="contained"
+                            onClick={openTemplate}
+                            className="floating-button"
+                            sx={{width: "100%", backgroundColor: "#4FAA89"}}>
+                            View Website
+                        </Button>
                     </div>
                 </div>
             </div>

@@ -289,14 +289,13 @@ main {
     background: rgba(255, 255, 255, 0.95);
 }
 .how-to-div {
-    width: 1000px;
     display: flex;
     flex-wrap: wrap;
     margin: auto;
-    justify-content: space-between;
+    justify-content: center;
     margin-top: 50px;
     padding-top: 50px;
-    padding-bottom: 40px;
+    padding-bottom: 80px;
     border-top: 2px solid grey;
 }
 @media screen and (max-width: 1080px) {
