@@ -9,6 +9,7 @@ import {
     TextareaAutosize,
     TextField
 } from "@mui/material";
+import {Close} from "@mui/icons-material";
 
 export default function ContactForm(props) {
 
@@ -20,6 +21,7 @@ export default function ContactForm(props) {
             open={props.open}
             onClose={handleClose}
         >
+            <Close className="close" onClick={handleClose} />
             <DialogTitle>Make an inquiry</DialogTitle>
             <DialogContent>
                 <DialogContentText>
@@ -61,8 +63,8 @@ export default function ContactForm(props) {
                 />
             </DialogContent>
             <DialogActions>
-                <Button sx={{color: }} onClick={handleClose}>Close</Button>
-                <Button type="submit">Make inquiry</Button>
+                <Button sx={{color: "var(--primary-color)"}} onClick={handleClose}>Close</Button>
+                <Button sx={{color: "var(--primary-color)"}} type="submit">Make inquiry</Button>
             </DialogActions>
         </Dialog>
     )

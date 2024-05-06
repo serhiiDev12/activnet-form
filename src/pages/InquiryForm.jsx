@@ -9,7 +9,10 @@ import {sendOrder} from "../service";
 import {useNavigate} from "react-router-dom";
 import Loading from "./Loading";
 import logo from "../logo.svg";
-import ColorPicker from "../components/ColorPicker";
+import TemplateSelector from "../components/TemplateSelector";
+import template1 from "../components/Template1.png";
+import template2 from "../components/Template2.png";
+import template3 from "../components/Template3.png";
 
 function validPhoneInputCharacter(input) {
     let keyCode = input.keyCode;
@@ -29,6 +32,8 @@ export default function InquiryForm() {
     const dispatch = useDispatch();
     const ref = useRef();
 
+    const [selectedTemplate, setSelectedTemplate] = useState(1)
+    const [selectedRoute, setSelectedRoute] = useState("/order-website/templateOne")
     const [step, setStep] = useState(0)
     const [emailInvalid, setEmailInvalid] = useState(false);
     const [phoneInvalid, setPhoneInvalid] = useState(false);
@@ -36,10 +41,11 @@ export default function InquiryForm() {
     const [scrollHeight, setScrollHeight] = useState("");
     const [showLoading, setShowLoading] = useState(true)
     let navigate = useNavigate();
+
     useEffect(() => {
         window.scrollTo(0, 0);
-
     }, [navigate]);
+
     useEffect( () => {
         setShowLoading(true);
         setTimeout(() => {
@@ -78,8 +84,6 @@ export default function InquiryForm() {
 
     const onLoad = () => {
         setTimeout(() => {
-
-            console.log(window.innerHeight, {data: window.innerHeight})
             setScrollHeight(window.innerHeight -195 + 'px')
         }, 0)
     }
@@ -103,6 +107,12 @@ export default function InquiryForm() {
         return !group.fields.find(item => item.id === fieldId).value
     }
 
+    const templates = [
+        {id: 1, src: template1, route: '/order-website/templateOne'},
+        {id: 2, src: template2, route: '/order-website/templateTwo'},
+        {id: 3, src: template3, route: '/order-website/templateThree'}
+    ]
+
     const onSendOrder = async () => {
         if (emailInvalid || phoneInvalid) {
             return;
@@ -114,8 +124,13 @@ export default function InquiryForm() {
         }
     }
 
+    const selectTemplate = (id) => {
+        setSelectedTemplate(id);
+        setSelectedRoute(templates.find(item => item.id === id).route)
+    }
+
     const openTemplate = () => {
-        navigate('/order-website/templateTwo/false');
+        navigate(`${selectedRoute}/false`);
     }
 
     return (
@@ -124,15 +139,10 @@ export default function InquiryForm() {
                 showLoading &&
                 <Loading />
             }
-            <header>
-                <nav>
-                    <img className="activnet" src="./logo.svg" alt="ActivNet" onClick={goHome}/>
-                    <a onClick={goHome}>HOME</a>
-                </nav>
-            </header>
             <div className="flex">
                 <nav>
-                    <img className="activnet" src={logo} alt="ActivNet"/>
+                    <img className="activnet" src={logo} alt="ActivNet" onClick={goHome}/>
+                    <a onClick={goHome}>HOME</a>
                 </nav>
                 <Box
                     component="form"
@@ -278,7 +288,7 @@ export default function InquiryForm() {
                                           onClick={stepNext}>Next</Button>
                         }
                     </div>
-
+                    <TemplateSelector selectedTemplateId={selectedTemplate} selectTemplate={selectTemplate} templates={templates} />
                     {listOfInvalidFields.length > 0 &&
                         <div>
                             <h4 className="error">You have problem with following fields</h4>
@@ -299,7 +309,7 @@ export default function InquiryForm() {
                             ref={ref}
                             id="frame"
                             className="website-preview-frame"
-                            src="http://localhost:3000/order-website/templateTwo/true"
+                            src={"http://localhost:3000" + selectedRoute + "/true"}
                             frameBorder={0}
                             height={scrollHeight}
                             onLoad={onLoad}></iframe>

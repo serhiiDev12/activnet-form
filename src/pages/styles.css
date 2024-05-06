@@ -129,3 +129,25 @@ nav a:hover {
     position: absolute;
     bottom: 190px;
 }
+
+.template-selector {
+    display: flex;
+    overflow: auto;
+    gap: 25px;
+    justify-items: center;
+    background: #fafafa;
+}
+.template-item {
+    background-size: cover;
+    background-position: center;
+    min-width: 250px;
+    height: 400px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+.template-item:hover {
+    border: 1px solid #279472;
+    -webkit-box-sizing: border-box; /* Safari/Chrome, other WebKit */
+    -moz-box-sizing: border-box;    /* Firefox, other Gecko */
+    box-sizing: border-box;
+}

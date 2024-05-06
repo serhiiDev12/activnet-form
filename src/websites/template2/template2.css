@@ -11,7 +11,10 @@
     right: 0;
     z-index: 9999999;
 }
-
+.templatetwo-navlogo {
+    display: flex;
+    gap: 10px;
+}
 h6 {
     color: rgb(215, 60, 13);
     font-size: 18px;
@@ -257,22 +260,28 @@ h6 {
     color: var(--primary-color);
 }
 .templatetwo-testimonials {
-    margin: 0 10vw 0 10vw;
     padding: 40px 0 40px;
+    background: #fafafa;
 }
 .templatetwo-testimonial {
     display: flex;
-    gap: 12px;
+    gap: 25px;
     justify-content: center;
     align-items: center;
     z-index: 0;
 }
 .templatetwo-testemonials-item-content {
-    text-align: left;
+    text-align: center;
+}
+.templatetwo-testemonials-item-content p {
+    text-align: center;
+    color: #222A2E;
+    margin: 20px 0 20px 0;
+    font-size: 16px;
 }
 .templatetwo-testemonials-item-content h2 {
-    text-align: left;
-    margin-top: 0;
+    text-align: center;
+    margin-top: 20px;
     margin-bottom: 0;
     font-weight: 300;
 }

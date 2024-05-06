@@ -36,9 +36,6 @@ export default function NavBar(props) {
                         <a href="">Reviews</a>
                         <a href="">Contact</a>
                     </div>
-                    <div className="templatetwo-navbutton">
-                        <button className="templatetwo-navbutton-c" onClick={() => props.setOpenClose(true)}>Make Inquiry</button>
-                    </div>
                 </div>
             </Toolbar>
         </AppBar>

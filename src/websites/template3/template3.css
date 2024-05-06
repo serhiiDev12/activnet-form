@@ -1,0 +1,246 @@
+.template-three-header {
+    background-image: url("https://images.unsplash.com/photo-1497366811353-6870744d04b2?q=80&w=2069&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D");
+    background-position: center;
+    background-size: cover;
+    width: 100%;
+    height: 800px;
+    filter: brightness(60%);
+}
+.template-three-header-text {
+    width: 100%;
+    margin: auto;
+    position: absolute;
+    top: 0;
+    padding-top: 300px;
+    color: white;
+}
+.template-three-header-text p {
+    margin: auto;
+    text-align: center;
+    font-size: 18px;
+    background: var(--primary-color);
+    color: white;
+    opacity: 0.8;
+    padding: 15px 25% 15px 25%;
+}
+
+.template-three-contact-form-background {
+    background: #fafafa;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 0 0 45px 0;
+}
+
+.template-three-contact-form h4 {
+    color: var(--primary-color);
+}
+.template-three-contact-form {
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background: white;
+    border-radius: 8px;
+    gap: 25px;
+    margin-top: -38px;
+    z-index: 9;
+}
+.template-three-contact-form-name {
+    display: flex;
+    gap: 18px;
+}
+.template-three-contact-form-button {
+    background-color: var(--primary-color);
+    color: white;
+    border: none;
+    padding: 20px 20px;
+    border-radius: 4px;
+    cursor: pointer;
+    width: 100%;
+    transition: 0.3s;
+}
+.template-three-contact-form-button:hover {
+    background-color: var(--primary-color);
+    filter: brightness(80%);
+}
+.template-three-services {
+    padding: 35px;
+}
+h4 {
+    color: var(--primary-color);
+}
+.template-three-services-list {
+    display: flex;
+    justify-content: center;
+    gap: 25px;
+}
+.template-three-services-list-item {
+    width: 25vw;
+    height: 45vh;
+    background-image: url("https://images.unsplash.com/photo-1535957998253-26ae1ef29506?q=80&w=1936&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D");
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    flex-direction: column-reverse;
+}
+.template-three-services-list-item-text {
+    background: var(--primary-color);
+}
+
+.template-three-services-list-item-text h4 {
+    color: white;
+}
+
+.template-three-services-list-item-text p {
+    color: white;
+    text-align: center;
+}
+.template-three-whyus {
+    background: #Fafafa;
+    padding: 55px;
+}
+.template-three-whyus-flex-inline {
+    display: flex;
+    gap: 18px;
+    justify-content: center;
+
+}
+.template-three-whyus-flex-inline-item-img {
+    background-image: url("https://images.unsplash.com/photo-1543269865-cbf427effbad?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D");
+    width: 30vw;
+    height: 15vw;
+    background-size: cover;
+    background-position: center;
+}
+.template-three-whyus-item {
+    border-top: 1px solid var(--primary-color);
+}
+.lft {
+    text-align: right;
+}
+.rght {
+    text-align: left;
+}
+.template-three-whyus-flex-inline-item h5 {
+    color: var(--primary-color);
+    font-size: 16px;
+    font-weight: 400;
+}
+
+.template-three-testimonials {
+    padding: 35px;
+    background: #fff;
+}
+.template-three-testimonials h4 {
+    color: var(--primary-color);
+}
+.template-three-testimonials-list {
+    display: flex;
+    justify-content: space-between;
+    gap: 50px;
+}
+.template-three-testimonial {
+    width: 15vw;
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    flex-direction: column-reverse;
+}
+.template-three-testimonials-list-item-text {
+    background: var(--primary-color);
+}
+.template-three-testimonials-list-item-text h4 {
+    color: white;
+}
+.template-three-testimonials-list-item-text p {
+    color: white;
+    text-align: center;
+}
+.template-three-question-form {
+    background: #fafafa;
+    padding: 50px;
+    display: flex;
+    justify-content: center;
+}
+.template-three-question-form-grid {
+    display: flex;
+    flex-wrap: nowrap;
+    flex-direction: row;
+    border-radius: 12px;
+    background-color: white;
+}
+.template-three-question-form-form p {
+    text-align: center;
+    font-weight: 300;
+    font-size: 16px;
+    margin: 0;
+}
+.template-three-question-form-form h4 {
+    margin: 0;
+    font-size: 20px;
+    font-weight: 400;
+}
+.template-three-question-form-form {
+    padding: 40px;
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+}
+
+.template-three-question-form-img {
+    background-image: url("https://images.unsplash.com/photo-1544535830-9df3f56fff6a?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D");
+    background-position: center;
+    background-size: cover;
+    width: 40vw;
+    height: 100%;
+}
+
+.flex-inline {
+    display: flex;
+    gap: 20px;
+}
+
+.template-three-footer {
+    display: flex;
+    gap: 30px;
+    padding: 80px 60px 80px 60px;
+    color: white;
+    align-items: center;
+    justify-content: space-between;
+    background-color: var(--primary-color);
+}
+.template-three-footer-flex-one {
+    width: 30%;
+}
+.template-three-footer-flex-one h2 {
+    text-align: left;
+}
+.template-three-footer-flex-one p {
+    text-align: left;
+    color: white;
+    font-size: 14px;
+    font-weight: 300;
+}
+.template-three-footer-flex-two {
+    display: flex;
+    gap: 20vw;
+}
+.template-three-footer-flex-two-col a {
+    color: white;
+    text-decoration: none;
+    font-weight: 300;
+    font-size: 14px;
+}
+.template-three-footer-flex-two-col {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    gap: 5px;
+}
+.template-three-footer-flex-three {
+    display: flex;
+    justify-content: center;
+}

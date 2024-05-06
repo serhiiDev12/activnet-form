@@ -58,7 +58,7 @@ export default function ColorPicker() {
                         <div className={`color ${selectedColor === item.value ? "bordered" : ""}`} style={{
                             backgroundColor: item.value
                         }}></div>
-                        <p>{item.name}</p>
+                        <p style={{textAlign: 'center'}}>{item.name}</p>
                     </div>
                 )
             }
