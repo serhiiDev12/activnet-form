@@ -10,9 +10,12 @@ import template2 from "../components/Template2.png";
 import template3 from "../components/Template3.png";
 import Header from "../components/HeaderAN";
 import ServicesAN from "../components/ServicesAN";
+import ChooseTemplate from "../components/ChooseTemplate";
+import Pricing from "../components/Pricing";
 
 export default function MainPage() {
-    const [showLoading, setShowLoading] = useState(true)
+    const [showLoading, setShowLoading] = useState(true);
+    const [small, setSmall] = useState(false);
     let navigate = useNavigate();
 
     const templates = [
@@ -20,6 +23,14 @@ export default function MainPage() {
         {id: 2, src: template2, route: '/order-website/templateTwo'},
         {id: 3, src: template3, route: '/order-website/templateThree'}
     ]
+
+    useEffect(() => {
+        if (typeof window !== "undefined") {
+            window.addEventListener("scroll", () =>
+                setSmall(window.pageYOffset > 200)
+            );
+        }
+    }, []);
 
     useEffect(() => {
         setShowLoading(true)
@@ -43,17 +54,22 @@ export default function MainPage() {
                 <Loading />
             }
             <header>
-                <nav>
+                <nav style={{
+                    backgroundColor: !small ? "transparent": "black",
+                    transition: "all 0.3s"
+                }}>
                     <img className="activnet" src="./logo.svg" alt="ActivNet" />
                         <a>About</a>
                         <a>Features</a>
                         <a>Pricing</a>
                 </nav>
             </header>
-            <div>
                 <Header start={startWebsiteCreate} />
-                <ServicesAN start={startWebsiteCreate} />
-            </div>
+                <div className="map-section">
+                    <ServicesAN start={startWebsiteCreate} />
+                    <ChooseTemplate start={startWebsiteCreate} />
+                    <Pricing />
+                </div>
         </div>
     )
 }
