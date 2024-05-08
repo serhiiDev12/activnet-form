@@ -12,6 +12,8 @@ import Header from "../components/HeaderAN";
 import ServicesAN from "../components/ServicesAN";
 import ChooseTemplate from "../components/ChooseTemplate";
 import Pricing from "../components/Pricing";
+import Faq from "../components/Faq";
+import Footer from "../components/Footer";
 
 export default function MainPage() {
     const [showLoading, setShowLoading] = useState(true);
@@ -69,6 +71,8 @@ export default function MainPage() {
                     <ServicesAN start={startWebsiteCreate} />
                     <ChooseTemplate start={startWebsiteCreate} />
                     <Pricing />
+                    <Faq />
+                    <Footer />
                 </div>
         </div>
     )

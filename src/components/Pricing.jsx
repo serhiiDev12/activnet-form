@@ -16,13 +16,13 @@ const prices = [
     {
         id: 1113,
         title: 'Entrepreneur',
-        price: '$25.98/m',
+        price: '$24.71/m',
         description: "This plan includes sms or email integration, so you can receive formatted inquiries on your website, either question or contact form"
     },
     {
-        id: 1113,
+        id: 1114,
         title: 'Designer services',
-        price: '$30-$250',
+        price: '$0-$250',
         description: "Want your own website design? Our designer will make you best website on the market! Go for Logo, templates and landing pages"
     }
 ]

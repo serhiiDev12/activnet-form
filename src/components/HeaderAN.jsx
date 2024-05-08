@@ -12,7 +12,7 @@ const renderStuff = [
     {
         id: 12,
         title: "We cover your back",
-        subtext: "ActivNet team don't believe in pushing their clients to build a website themselves and spend lot's of time making it run. Instead we provide website configuration, development and testing for FREE. All that so you can focus on your business while we cover your back",
+        subtext: "ActivNet team don't believe in pushing their clients to build a website themselves and spend lot's of time making it run. All that so you can focus on your business while we cover your back",
         src: "https://images.unsplash.com/photo-1594402919317-9e67dca0a305?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
     },
     {

@@ -44,7 +44,7 @@ body {
     color: #bdf3b7;
     text-align: left;
     font-size: 50px;
-    font-weight: 400;
+    font-weight: 500;
     margin-bottom: 0;
 }
 @media screen and (max-width: 1640px) {
@@ -85,19 +85,20 @@ body {
 }
 .services-an h1 {
     font-weight: 500;
-    font-size: 40px;
+    font-size: 50px;
     color: #bdf3b7;
 }
 .map-section {
     background: url("https://images.unsplash.com/photo-1446776653964-20c1d3a81b06?q=80&w=2071&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D");
     background-position: center;
     background-size: cover;
+    background-attachment: fixed;
 }
 .services-an-flex {
     display: flex;
-    justify-content: center;
+    justify-content: space-between;
     flex-wrap: wrap;
-    gap: 70px;
+    margin: 0 5vw;
 }
 .services-an-background p {
     font-weight: 300;
@@ -115,6 +116,7 @@ body {
     cursor: pointer;
     transition: 0.3s;
     padding: 15px 30px;
+    margin-top: 50px;
 }
 .services-an-background button:hover {
     color: #282c34;
@@ -133,7 +135,7 @@ body {
     text-align: left;
 }
 .service-an-item {
-    width: 300px;
+    width: 270px;
 }
 .service-an-item h4 {
     color: white;
@@ -148,8 +150,8 @@ body {
     padding-bottom: 70px;
 }
 .choose-template-an button {
-    background: #bdf3b7;
-    color: #282c34;
+    background: #279472;
+    color: #fff;
     border: none;
     box-shadow: 0px 0px 14px -2px rgba(0,0,0,0.44);
     align-items: center;
@@ -180,6 +182,7 @@ body {
 .choose-template-an h1 {
     margin-top: 0;
     padding-top: 30px;
+    font-size: 50px;
 }
 .triangles {
     display: flex;
@@ -205,13 +208,14 @@ body {
     flex-wrap: wrap;
     justify-content: center;
     gap: 40px;
+    padding: 0 2vw;
     padding-bottom: 40px;
 }
 .template-img {
     background-size: cover;
     background-position: top;
-    min-width: 500px;
-    height: 600px;
+    min-width: 410px;
+    height: 500px;
 }
 @media screen and (max-width: 533px) {
     .template-img {
@@ -226,23 +230,24 @@ body {
     font-size: 50px;
 }
 .pricing-an {
+    padding: 0 6vw;
     background: #ebecec;
     padding-bottom: 100px;
 }
 .pricing-flexbox {
     display: flex;
-    justify-content: center;
+    justify-content: space-between;
     flex-wrap: wrap;
-    gap: 40px;
     margin-top: 70px;
 }
 .price-item {
-    width: 370px;
+    width: 270px;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
 }
+
 .price-item h1 {
     font-weight: 800;
     margin: 0;
@@ -255,4 +260,72 @@ body {
     font-weight: 400;
     color: #222A2E;
     font-size: 18px;
+}
+
+.faq {
+    background: #ebecec;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 70px 20px 70px 20px;
+}
+.faq h1 {
+    font-size: 50px;
+}
+.faq-tree {
+    width: 85%;
+}
+.faq-tree-section .MuiTreeItem-label {
+    font-size: 25px !important;
+}
+.faq-tree-section {
+    text-align: left;
+    color: #104B31;
+    font-size: 20px !important;
+}
+.faq-tree-item {
+    background: #e0e0e0;
+}
+.faq-tree-item .MuiTreeItem-label {
+    color: #000000;
+    text-align: left;
+    margin: 12px;
+    font-size: 18px !important;
+}
+
+.footer-an {
+    height: 500px;
+    background: rgba(0,0,0,80%);
+    display: flex;
+    width: 100%;
+    align-items: center;
+}
+.footer-an-content {
+    display: flex;
+    width: 100%;
+    padding: 0 7vw;
+    flex-direction: row;
+    justify-content: space-between;
+}
+.footer-am-content-links {
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+}
+.footer-am-content-links h2 {
+    color: #d9d9d9;
+}
+.footer-am-content-links p {
+    color: #d9d9d9;
+    font-size: 16px;
+    line-height: 16px;
+}
+.footer-am-content-links a {
+    text-decoration: none;
+    color: white;
+    cursor: pointer;
+    font-size: 16px;
+    line-height: 16px;
+    margin-block-start: 1em;
+    margin-block-end: 1em;
 }
