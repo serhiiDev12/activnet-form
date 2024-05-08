@@ -61,9 +61,9 @@ export default function MainPage() {
                     transition: "all 0.3s"
                 }}>
                     <img className="activnet" src="./logo.svg" alt="ActivNet" />
-                        <a>About</a>
-                        <a>Features</a>
-                        <a>Pricing</a>
+                        <a href="#about">About</a>
+                        <a href="#templates">Templates</a>
+                        <a href="#prices">Pricing</a>
                 </nav>
             </header>
                 <Header start={startWebsiteCreate} />

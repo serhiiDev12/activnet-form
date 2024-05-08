@@ -29,7 +29,7 @@ const prices = [
 
 export default function Pricing() {
     return (
-        <div className="pricing-an">
+        <div id="#prices" className="pricing-an">
             <h1>Prices</h1>
             <div className="pricing-flexbox">
                 {

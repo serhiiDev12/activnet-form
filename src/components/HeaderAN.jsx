@@ -25,7 +25,7 @@ const renderStuff = [
 
 export default function Header(props) {
     return (
-        <div className="main-page-header">
+        <div id="about" className="main-page-header">
             <Carousel
                 className="main-page-header"
                 NextIcon={<ArrowForward />}

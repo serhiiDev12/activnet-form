@@ -31,7 +31,7 @@ const renderStuff = [
 
 export default function ChooseTemplate(props) {
     return (
-        <div className="choose-template-an">
+        <div id="templates" className="choose-template-an">
             <div className="triangles">
                 <div className="left-temp-sel"></div>
                 <div className="right-temp-sel"></div>

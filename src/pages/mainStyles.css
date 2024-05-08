@@ -22,7 +22,7 @@ body {
     display: flex;
     align-items: center;
     gap: 10px;
-    font-size: 25px;
+    font-size: 20px;
     cursor: pointer;
     transition: 0.3s;
     padding-bottom: 15px;
@@ -43,7 +43,7 @@ body {
 .header-text h1 {
     color: #bdf3b7;
     text-align: left;
-    font-size: 50px;
+    font-size: 40px;
     font-weight: 500;
     margin-bottom: 0;
 }
@@ -85,7 +85,7 @@ body {
 }
 .services-an h1 {
     font-weight: 500;
-    font-size: 50px;
+    font-size: 40px;
     color: #bdf3b7;
 }
 .map-section {
@@ -112,7 +112,7 @@ body {
     color: white;
     align-items: center;
     gap: 10px;
-    font-size: 25px;
+    font-size: 20px;
     cursor: pointer;
     transition: 0.3s;
     padding: 15px 30px;
@@ -156,7 +156,7 @@ body {
     box-shadow: 0px 0px 14px -2px rgba(0,0,0,0.44);
     align-items: center;
     gap: 10px;
-    font-size: 25px;
+    font-size: 20px;
     display: flex;
     margin: auto;
     justify-content: center;
@@ -182,7 +182,7 @@ body {
 .choose-template-an h1 {
     margin-top: 0;
     padding-top: 30px;
-    font-size: 50px;
+    font-size: 40px;
 }
 .triangles {
     display: flex;
@@ -227,7 +227,7 @@ body {
 }
 .pricing-an h1 {
     margin: auto;
-    font-size: 50px;
+    font-size: 40px;
 }
 .pricing-an {
     padding: 0 6vw;
@@ -270,18 +270,18 @@ body {
     padding: 70px 20px 70px 20px;
 }
 .faq h1 {
-    font-size: 50px;
+    font-size: 40px;
 }
 .faq-tree {
     width: 85%;
 }
 .faq-tree-section .MuiTreeItem-label {
-    font-size: 25px !important;
+    font-size: 18px !important;
 }
 .faq-tree-section {
     text-align: left;
     color: #104B31;
-    font-size: 20px !important;
+    font-size: 15px !important;
 }
 .faq-tree-item {
     background: #e0e0e0;
