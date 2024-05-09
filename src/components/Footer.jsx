@@ -6,16 +6,6 @@ export default function Footer() {
         <div className="footer-an">
             <div className="footer-an-content">
                 <div className="footer-am-content-links">
-                    <h2>Main specialization</h2>
-                    <p>Website maintenance</p>
-                    <p>Web development</p>
-                    <p>Hosting</p>
-                    <p>UX/UI Design</p>
-                    <p>Logotype design</p>
-                    <p>Marketing</p>
-                    <p>SEO Attributes</p>
-                </div>
-                <div className="footer-am-content-links">
                     <h2>Technologies</h2>
                     <p>Amazon Web Services</p>
                     <p>React</p>

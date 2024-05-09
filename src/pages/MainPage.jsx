@@ -49,6 +49,10 @@ export default function MainPage() {
         navigate('/order-website');
     }
 
+    const startDesignerInquiry = () => {
+
+    }
+
     return (
         <div className="wrapper">
             {
@@ -70,7 +74,7 @@ export default function MainPage() {
                 <div className="map-section">
                     <ServicesAN start={startWebsiteCreate} />
                     <ChooseTemplate start={startWebsiteCreate} />
-                    <Pricing />
+                    <Pricing start={startWebsiteCreate} designer={startDesignerInquiry}/>
                     <Faq />
                     <Footer />
                 </div>

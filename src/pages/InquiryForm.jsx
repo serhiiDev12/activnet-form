@@ -135,15 +135,14 @@ export default function InquiryForm() {
 
     return (
         <div>
+            <nav className="inqury">
+                <img className="activnet" src={logo} alt="ActivNet" onClick={goHome}/>
+            </nav>
             {
                 showLoading &&
-                <Loading />
+                <Loading/>
             }
             <div className="flex">
-                <nav>
-                    <img className="activnet" src={logo} alt="ActivNet" onClick={goHome}/>
-                    <a onClick={goHome}>HOME</a>
-                </nav>
                 <Box
                     component="form"
                     className="form"
@@ -288,7 +287,8 @@ export default function InquiryForm() {
                                           onClick={stepNext}>Next</Button>
                         }
                     </div>
-                    <TemplateSelector selectedTemplateId={selectedTemplate} selectTemplate={selectTemplate} templates={templates} />
+                    <TemplateSelector selectedTemplateId={selectedTemplate} selectTemplate={selectTemplate}
+                                      templates={templates}/>
                     {listOfInvalidFields.length > 0 &&
                         <div>
                             <h4 className="error">You have problem with following fields</h4>

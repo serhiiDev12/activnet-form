@@ -83,6 +83,14 @@ body {
     flex-direction: column;
     align-items: center;
 }
+@media screen and (max-width: 600px) {
+    .services-an h1 {
+        margin: 0 5vw;
+    }
+    .services-an p {
+        margin: 0 5vw;
+    }
+}
 .services-an h1 {
     font-weight: 500;
     font-size: 40px;
@@ -99,6 +107,11 @@ body {
     justify-content: space-between;
     flex-wrap: wrap;
     margin: 0 5vw;
+}
+@media screen and (max-width: 600px) {
+    .services-an-flex {
+        justify-content: center;
+    }
 }
 .services-an-background p {
     font-weight: 300;
@@ -214,15 +227,13 @@ body {
 .template-img {
     background-size: cover;
     background-position: top;
-    min-width: 410px;
-    height: 500px;
+    min-width: 357px;
+    height: 442px;
 }
 @media screen and (max-width: 533px) {
     .template-img {
         background-size: cover;
         background-position: top;
-        min-width: 400px;
-        height: 500px;
     }
 }
 .pricing-an h1 {
@@ -240,12 +251,45 @@ body {
     flex-wrap: wrap;
     margin-top: 70px;
 }
+@media screen and (max-width: 600px) {
+    .pricing-flexbox {
+        justify-content: center;
+    }
+}
+.price-item button {
+    background: #279472;
+    color: #fff;
+    border: none;
+    box-shadow: 0px 0px 14px -2px rgba(0,0,0,0.44);
+    align-items: center;
+    gap: 10px;
+    font-size: 20px;
+    display: flex;
+    margin: auto;
+    justify-content: center;
+    cursor: pointer;
+    transition: 0.3s;
+    width: 100%;
+    margin-top: 18px;
+    margin-bottom: 0;
+    position: relative;
+    bottom: 0;
+    padding: 12px 0 12px 0;
+}
 .price-item {
     width: 270px;
     display: flex;
     flex-direction: column;
     justify-content: center;
-    align-items: center;
+    background: #fafafa;
+    padding: 15px;
+    box-shadow: 0px 0px 14px -2px rgba(0,0,0,0.24);
+}
+@media screen and (max-width: 1410px) {
+    .pricing-flexbox {
+        justify-content: center;
+        gap: 20px;
+    }
 }
 
 .price-item h1 {
@@ -268,12 +312,14 @@ body {
     flex-direction: column;
     justify-content: center;
     padding: 70px 20px 70px 20px;
+    align-items: center;
 }
 .faq h1 {
     font-size: 40px;
 }
 .faq-tree {
     width: 85%;
+    margin: auto;
 }
 .faq-tree-section .MuiTreeItem-label {
     font-size: 18px !important;
@@ -314,6 +360,7 @@ body {
 }
 .footer-am-content-links h2 {
     color: #d9d9d9;
+    font-size: 16px;
 }
 .footer-am-content-links p {
     color: #d9d9d9;
@@ -328,4 +375,27 @@ body {
     line-height: 16px;
     margin-block-start: 1em;
     margin-block-end: 1em;
+}
+.description-area {
+    display: flex;
+    flex-direction: column;
+    justify-content: left;
+}
+.listed {
+    text-align: left !important;
+    margin: 0;
+    margin-bottom: 10px;
+    font-size: 17px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+.best-seller {
+    position: relative;
+    background: #ed1818;
+    color: white;
+    width: 55px;
+    top: -15px;
+    left: -15px;
+    border-radius: 0 0 12px 0;
 }

@@ -31,8 +31,8 @@ export default function Header(props) {
                 NextIcon={<ArrowForward />}
                 PrevIcon={<ArrowBack />}
                 animation="slide"
-                navButtonsAlwaysVisible={true}
-                interval={12000}
+                navButtonsAlwaysVisible={false}
+                interval={8000}
             >
                 {
                     renderStuff.map(item => <div key={item.id} className="header-img-format main-page-header" style={{backgroundImage: `url("${item.src}")`}}>
