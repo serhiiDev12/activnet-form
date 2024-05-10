@@ -121,9 +121,7 @@ export default function InquiryForm() {
             setShowLoading(true)
             const statusOk = await sendOrder(orderForm);
             setShowLoading(false)
-            if (statusOk) {
-                navigate('/success');
-            }
+            navigate('/success');
         }
     }
 
