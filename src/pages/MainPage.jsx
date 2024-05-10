@@ -3,8 +3,6 @@ import './mainStyles.css'
 import { useNavigate } from "react-router-dom";
 import {useEffect, useState} from "react";
 import Loading from "./Loading";
-import {Timeline, TimelineConnector, TimelineContent, TimelineDot, TimelineItem, TimelineSeparator} from "@mui/lab";
-import {AccessTime, Edit, InsertDriveFile, Send, TagFaces, Web} from "@mui/icons-material";
 import template1 from "../components/Template1.png";
 import template2 from "../components/Template2.png";
 import template3 from "../components/Template3.png";
@@ -50,7 +48,11 @@ export default function MainPage() {
     }
 
     const startDesignerInquiry = () => {
-
+        setShowLoading(true)
+        setTimeout(() => {
+            setShowLoading(false);
+        }, 400)
+        navigate('/order-design');
     }
 
     return (

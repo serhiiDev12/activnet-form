@@ -50,7 +50,7 @@ export default function InquiryForm() {
         setShowLoading(true);
         setTimeout(() => {
             setShowLoading(false)
-        }, 500)
+        }, 3000)
     }, [navigate])
 
     const goHome = () => {
@@ -121,6 +121,9 @@ export default function InquiryForm() {
             setShowLoading(true)
             const statusOk = await sendOrder(orderForm);
             setShowLoading(false)
+            if (statusOk) {
+                navigate('/success');
+            }
         }
     }
 

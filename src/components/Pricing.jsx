@@ -1,5 +1,5 @@
 import * as React from 'react'
-import {Star} from "@mui/icons-material";
+import {Close, Star} from "@mui/icons-material";
 
 const prices = [
     {
@@ -12,30 +12,35 @@ const prices = [
         id: 1112,
         title: 'Basic Plan',
         price: '$16.98/m',
+        brief: "This plan is best for individuals that need either a landing page as a representation of their company",
         description: ["Website maintenance", "Support", "Make changes to website anytime", "No SMS or Email Integration"]
     },
     {
         id: 1113,
-        title: 'Entrepreneur',
+        title: 'Business',
         price: '$24.71/m',
+        brief: "Best for commercial use where you want to keep in touch with client, it allows clients to make appointments, contact business or make inquiries",
         description: ["Website maintenance", "Support", "Make changes to website anytime", "Awesome SMS or Email Integration", "30% discount on Designer work"]
     },
     {
         id: 1114,
         title: 'Designer services',
         price: '$0-$250',
-        description: ["Want your own website design? Our designer will make you best website on the market! Go for Logo, templates and landing pages"]
+        brief: "Want your own website design? Our designer will make you best website on the market! Go for Logo, templates and landing pages",
+        description: ["Logo", "Company Branding", "Custom website", "Fixed price", "Redesign of existing website", "Custom features"]
     }
 ]
 
-export default function Pricing() {
+export default function Pricing(props) {
+
+
     return (
         <div id="#prices" className="pricing-an">
             <h1>Prices</h1>
             <div className="pricing-flexbox">
                 {
                     prices.map(item => (
-                        <div key={item.id} className="price-item">
+                        <div key={item.id} className={item.title === "Development" ? "price-flexbox-inner grey-bg" : "price-flexbox-inner"}>
                             {
                                 item.id === 1113 &&
                                 <div className="best-seller">
@@ -43,20 +48,36 @@ export default function Pricing() {
                                     <Star sx={{color: "#fff"}}/>
                                 </div>
                             }
-                            <h1>{item.price}</h1>
-                            <h2>{item.title}</h2>
-                            <div className="description-area">
-                                {
-                                item.description.length > 1 &&
-                                    item.description.map((desc, index) => <span key={index} className="listed"><Star
-                                        sx={{color: "#279472"}}/>{desc}</span>)
-                                }
-                                {
-                                    item.description.length === 1 &&
-                                    item.description[0]
-                                }
+                            <div className={item.id === 1113 ? "price-item-seller price-item" : "price-item"}>
+                                <div>
+                                    <h1>{item.price}</h1>
+                                    <h2>{item.title}</h2>
+                                    {item.brief !== "" ? <p className="brief">{item.brief}</p> : <></>}
+                                    <div className="description-area">
+                                        {
+                                            item.description.length > 1 &&
+                                            item.description.map((desc, index) =>
+                                                <span className={desc === "No SMS or Email Integration" ? 'greyed listed': 'listed'} key={index}>
+                                                {desc === "No SMS or Email Integration"
+                                                    ? <Close sx={{color: "red"}} />
+                                                : <Star
+                                                        sx={{color: "#6e6e6e"}}/>}
+                                                {desc}</span>)
+                                        }
+                                        {
+                                            item.description.length === 1 &&
+                                            item.description[0]
+                                        }
+                                    </div>
+                                </div>
+                                <button
+                                    onClick={item.id === 1114 ? props.designer : props.start }
+                                    disabled={item.title === "Development"}
+                                    className={item.title === "Development" ? 'button-disabled': ''}
+                                >{item.title === "Development" ? 'You already have it!' : 'Get it now'}</button>
                             </div>
                         </div>
+
                     ))
                 }
             </div>

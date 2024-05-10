@@ -27,7 +27,12 @@ export default function Footer() {
                 </div>
                 <div className="footer-am-content-links">
                     <h2>Follow Us</h2>
-                    <LinkedIn fontSize="large" className="in" sx={{color: "white"}}></LinkedIn>
+                    <LinkedIn
+                        onClick={() => window.open('https://www.linkedin.com/company/activnetech/about/', '_blank')}
+                        fontSize="large"
+                        className="in"
+                        sx={{color: "white"}}
+                    />
                 </div>
             </div>
         </div>

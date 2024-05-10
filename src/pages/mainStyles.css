@@ -276,14 +276,22 @@ body {
     bottom: 0;
     padding: 12px 0 12px 0;
 }
-.price-item {
+.price-flexbox-inner {
     width: 270px;
     display: flex;
-    flex-direction: column;
-    justify-content: center;
+    flex-direction: row;
+    justify-content: space-between;
     background: #fafafa;
     padding: 15px;
     box-shadow: 0px 0px 14px -2px rgba(0,0,0,0.24);
+}
+.price-item-seller {
+    margin-left: -38px;
+}
+.price-item {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
 }
 @media screen and (max-width: 1410px) {
     .pricing-flexbox {
@@ -392,10 +400,103 @@ body {
 }
 .best-seller {
     position: relative;
-    background: #ed1818;
+    background: #a53cbe;
     color: white;
     width: 55px;
+    height: 65px;
+    font-size: 12px;
     top: -15px;
     left: -15px;
+    padding-left: 4px;
+    padding-right: 4px;
     border-radius: 0 0 12px 0;
+}
+.brief {
+    text-align: center;
+    color: #5C7481;
+    font-size: 16px !important;
+    padding: 12px;
+    border-bottom: 1px solid #5C7481;
+}
+.greyed {
+    color: #a0abb0;
+}
+.grey-bg {
+    background: #e5e5e5;
+    box-shadow: none;
+}
+.in {
+    cursor: pointer;
+}
+.button-disabled {
+    background: #757575 !important;
+    color: #99b3c0 !important;
+}
+.navbar-withback {
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+}
+.navbar-withback:hover {
+    background: white;
+}
+.form-design {
+    padding: 30px;
+    max-width: 40%;
+    margin: auto;
+}
+@media screen and (max-width: 890px) {
+    .form-design {
+        max-width: 100%;
+    }
+}
+.form-design h3{
+    margin-top: 80px;
+}
+.stepper-design {
+    display: flex;
+    justify-content: center;
+    gap: 100px;
+}
+.form-designer-in {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    justify-content: center;
+}
+
+.success-page {
+    width: 100%;
+    height: 66vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+}
+.success-title {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+.success-title p {
+    font-size: 18px;
+    text-align: center;
+}
+
+.go-back {
+    width: 100%;
+    background: #104B31;
+    color: white;
+    padding: 15px;
+    border: none;
+    font-size: 18px;
+    margin-top: 15px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+.go-back:hover {
+    background: #65daae;
+    color: black;
 }

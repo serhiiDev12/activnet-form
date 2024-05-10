@@ -6,7 +6,7 @@ const renderStuff = [
     {
         id: 11,
         title: "Grow your business with ActivNet",
-        subtext: "We help all types of businesses to represent themselves in a web and getting quality and cheap website",
+        subtext: "Get your cheap website and start don't worry about maintaining and changing it. Our value - satisfied customer",
         src: "https://images.unsplash.com/photo-1509339022327-1e1e25360a41?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
     },
     {
