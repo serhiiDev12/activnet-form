@@ -64,6 +64,7 @@ export default function Designer() {
             return;
         }
         const statusOk = await sendOrder(inquiryObject);
+        navigate('/success');
     }
 
     const saveValueToLocalStorage = () => {
@@ -78,7 +79,6 @@ export default function Designer() {
         inquiry[key] = value;
         setInquiryObject(inquiry);
         saveValueToLocalStorage();
-        navigate('/success');
     }
 
     return (
