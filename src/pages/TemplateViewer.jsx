@@ -109,7 +109,7 @@ export default function TemplateViewer() {
                         ref={ref}
                         id="frame"
                         className="website-preview-frame"
-                        src={"https://www.activnet.tech/" + getTemplate() + `/${color}`}
+                        src={"https://www.activnet.tech" + getTemplate() + `/${color}`}
                         frameBorder={0}
                         height={scrollHeight}
                         onLoad={onLoad}></iframe>
