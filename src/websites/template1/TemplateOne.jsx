@@ -13,11 +13,16 @@ import {
     WhyUs
 } from './template-components'
 import './template-components/main.css'
-import ColorPicker from "../../components/ColorPicker";
-import {Button} from "@mui/material";
-import {useNavigate} from "react-router-dom";
+import {useEffect} from "react";
+import {useNavigate, useParams} from "react-router-dom";
 
-export default function TemplateOne() {
+export default function TemplateOne(props) {
+    const { color } = useParams();
+    useEffect(() => {
+        document.documentElement.style
+            .setProperty('--primary-color', '#' + color);
+    }, [color])
+
     return (
         <div className="template-one">
             <div className="fixed-nav">
@@ -33,9 +38,6 @@ export default function TemplateOne() {
             <Testimonials/>
             <Location/>
             <Footer/>
-            <div className="color-picker">
-                <ColorPicker/>
-            </div>
         </div>
     );
 }

@@ -44,7 +44,7 @@ export default function MainPage() {
         setTimeout(() => {
             setShowLoading(false);
         }, 400)
-        navigate('/order-website');
+        navigate('/website-viewer');
     }
 
     const startDesignerInquiry = () => {

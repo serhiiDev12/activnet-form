@@ -12,6 +12,7 @@ const prices = [
         id: 1112,
         title: 'Basic Plan',
         price: '$16.98/m',
+        crossedPrice: "$25.47",
         brief: "This plan is best for individuals that need either a landing page as a representation of their company",
         description: ["Website maintenance", "Support", "Make changes to website anytime", "No SMS or Email Integration"]
     },
@@ -19,6 +20,7 @@ const prices = [
         id: 1113,
         title: 'Business',
         price: '$24.71/m',
+        crossedPrice: "$37.06",
         brief: "Best for commercial use where you want to keep in touch with client, it allows clients to make appointments, contact business or make inquiries",
         description: ["Website maintenance", "Support", "Make changes to website anytime", "Awesome SMS or Email Integration", "30% discount on Designer work"]
     },
@@ -40,29 +42,26 @@ export default function Pricing(props) {
             <div className="pricing-flexbox">
                 {
                     prices.map(item => (
-                        <div key={item.id} className={item.title === "Development" ? "price-flexbox-inner grey-bg" : "price-flexbox-inner"}>
-                            {
-                                item.id === 1113 &&
-                                <div className="best-seller">
-                                    Best Seller
-                                    <Star sx={{color: "#fff"}}/>
-                                </div>
-                            }
+                        <div key={item.id}
+                             className={item.title === "Development" ? "price-flexbox-inner grey-bg" : "price-flexbox-inner"}>
                             <div className={item.id === 1113 ? "price-item-seller price-item" : "price-item"}>
                                 <div>
                                     <h1>{item.price}</h1>
+                                    {item.crossedPrice && <h3>{item.crossedPrice}</h3>}
                                     <h2>{item.title}</h2>
                                     {item.brief !== "" ? <p className="brief">{item.brief}</p> : <></>}
                                     <div className="description-area">
                                         {
                                             item.description.length > 1 &&
                                             item.description.map((desc, index) =>
-                                                <span className={desc === "No SMS or Email Integration" ? 'greyed listed': 'listed'} key={index}>
+                                                <span
+                                                    className={desc === "No SMS or Email Integration" ? 'greyed listed' : 'listed'}
+                                                    key={index}>
                                                 {desc === "No SMS or Email Integration"
-                                                    ? <Close sx={{color: "red"}} />
-                                                : <Star
+                                                    ? <Close sx={{color: "red"}}/>
+                                                    : <Star
                                                         sx={{color: "#6e6e6e"}}/>}
-                                                {desc}</span>)
+                                                    {desc}</span>)
                                         }
                                         {
                                             item.description.length === 1 &&
@@ -70,12 +69,12 @@ export default function Pricing(props) {
                                         }
                                     </div>
                                 </div>
-                                <button
-                                    onClick={item.id === 1114 ? props.designer : props.start }
-                                    disabled={item.title === "Development"}
-                                    className={item.title === "Development" ? 'button-disabled': ''}
-                                >{item.title === "Development" ? 'You already have it!' : 'Get it now'}</button>
                             </div>
+                            <button
+                                onClick={item.id === 1114 ? props.designer : props.start}
+                                disabled={item.title === "Development"}
+                                className={item.title === "Development" ? 'button-disabled' : ''}
+                            >{item.title === "Development" ? 'You already have it!' : 'Get it now'}</button>
                         </div>
 
                     ))

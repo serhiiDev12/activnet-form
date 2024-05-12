@@ -4,6 +4,7 @@ import {useDispatch, useSelector} from "react-redux";
 const orderSlice = createSlice({
     name: 'order',
     initialState: {
+        template: "",
         orderForm: [
             {
                 id: 1,

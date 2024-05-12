@@ -9,11 +9,16 @@ import TemplateTwo from "./websites/template2/TemplateTwo";
 import TemplateThree from "./websites/template3/TemplateThree";
 import Designer from "./pages/Designer";
 import SuccessPage from "./pages/SuccessPage";
+import TemplateViewer from "./pages/TemplateViewer";
 
 export const router = createBrowserRouter([
     {
         path: "/",
         element: <MainPage />,
+    },
+    {
+        path: "/website-viewer",
+        element: <TemplateViewer />,
     },
     {
         path: "/order-website",
@@ -28,15 +33,15 @@ export const router = createBrowserRouter([
         element: <SuccessPage />,
     },
     {
-        path: "/order-website/templateOne/:inFrame",
+        path: "/order-website/templateOne/:color",
         element: <TemplateOne />,
     },
     {
-        path: "/order-website/templateTwo/:inFrame",
+        path: "/order-website/templateTwo/:color",
         element: <TemplateTwo />,
     },
     {
-        path: "/order-website/templateThree/:inFrame",
+        path: "/order-website/templateThree/:color",
         element: <TemplateThree />,
     },
 ]);

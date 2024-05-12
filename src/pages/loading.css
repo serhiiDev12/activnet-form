@@ -3,11 +3,14 @@
     top: 0;
     width: 100%;
     z-index: 9999;
-    background: white;
+    background: #051300;
     height: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
+}
+.loading p{
+    color: white !important;
 }
 .contered-loading {
     display: flex;

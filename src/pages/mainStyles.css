@@ -80,7 +80,6 @@ body {
 .services-an {
     display: flex;
     background-size: cover;
-    flex-direction: column;
     align-items: center;
 }
 @media screen and (max-width: 600px) {
@@ -93,8 +92,24 @@ body {
 }
 .services-an h1 {
     font-weight: 500;
-    font-size: 40px;
+    font-size: 30px;
     color: #bdf3b7;
+    text-align: left;
+}
+.services-desc {
+    background: rgba(0, 0, 0, 0.8);
+    padding: 20px;
+}
+.services-desc h4 {
+    text-align: left;
+    margin: 0;
+    font-size: 20px;
+    padding-top: 10px;
+    color: #bdf3b7;
+}
+.services-desc p {
+    font-size: 16px !important;
+    font-weight: 400 !important;
 }
 .map-section {
     background: url("https://images.unsplash.com/photo-1446776653964-20c1d3a81b06?q=80&w=2071&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D");
@@ -103,21 +118,53 @@ body {
     background-attachment: fixed;
 }
 .services-an-flex {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    flex: 1;
+}
+.services-sidebyside {
     display: flex;
-    justify-content: space-between;
-    flex-wrap: wrap;
-    margin: 0 5vw;
+}
+@media screen and (max-width: 1430px) {
+    .services-an-flex {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+    }
+}
+.services-image-bg {
+    flex: 1;
+    height: 40vh;
+    width: 50vw;
+    transition: visibility 0s, opacity 0.5s linear;
+    display: flex;
+    flex-direction: column-reverse;
+    background-size: cover !important;
+    background-position: center !important;
+}
+@media screen and (max-width: 800px) {
+    .services-image-bg {
+        display: none;
+    }
+    .arrow-service {
+        display: none !important;
+    }
 }
 @media screen and (max-width: 600px) {
     .services-an-flex {
         justify-content: center;
     }
 }
+.service-margins {
+    margin-left: 20px;
+    margin-right: 20px;
+}
 .services-an-background p {
     font-weight: 300;
     font-size: 20px;
-    text-align: center;
-    color: #99b3c0;
+    text-align: left;
+    color: white;
 }
 .services-an-background button {
     background: #282c34;
@@ -137,35 +184,58 @@ body {
     padding: 15px 50px;
 }
 .services-an-background {
-    padding-top: 50px;
-    padding-bottom: 50px;
+    padding: 50px;
     width: 100%;
     height: 100%;
-    background: linear-gradient(180deg, rgba(0,0,0, 1) 0%, rgba(34, 39, 51,0.8) 100%);
+    background: linear-gradient(180deg, rgba(0,0,0, 1) 0%, rgba(15, 16, 21, 0.8) 100%);
 }
 
 .service-an-item p {
     text-align: left;
+    color: white;
+}
+@media screen and (max-width: 1430px) {
+    .service-an-item {
+        flex-grow: 1;
+        flex: 1 1 0px;
+        width: fit-content;
+    }
 }
 .service-an-item {
-    width: 270px;
+    border-top: 1px solid white;
+    cursor: pointer;
+    margin: 20px;
+    display: flex;
+    justify-content: left;
+    align-items: center;
+}
+.arrow-service {
+    color: white;
 }
 .service-an-item h4 {
     color: white;
-    border-bottom: 1px solid white;
     padding-bottom: 20px;
-    font-size: 24px;
+    font-size: 22px;
+    margin: 0;
+    text-align: left;
     font-weight: 700;
+    width: min-content;
+    margin-right: 16px;
+    transition: 0.3s;
+}
+.service-an-item h4:hover {
+    color: #bdf3b7;
+    margin-right: 20px;
 }
 
 .choose-template-an {
-    background-color: #ebecec;
+    background-color: rgba(15, 16, 21, 0.98);
     padding-bottom: 70px;
 }
 .choose-template-an button {
-    background: #279472;
-    color: #fff;
+    background: #282c34;
     border: none;
+    color: white;
     box-shadow: 0px 0px 14px -2px rgba(0,0,0,0.44);
     align-items: center;
     gap: 10px;
@@ -180,22 +250,23 @@ body {
 .choose-template-an p {
     display: flex;
     justify-content: center;
-    font-size: 18px;
-    color: #104B31;
-    font-weight: 500;
+    color: #eeeeee;
+    font-weight: 300;
+    font-size: 20px;
     padding-bottom: 30px;
     margin: 0 20px 20px 20px;
 }
 .choose-template-an button:hover {
-    background: #282c34;
-    border: none;
-    color: white;
+    color: #282c34;
+    background: #bdf3b7;
+    padding: 15px 50px;
 }
 
 .choose-template-an h1 {
     margin-top: 0;
     padding-top: 30px;
     font-size: 40px;
+    color: #bdf3b7;
 }
 .triangles {
     display: flex;
@@ -207,14 +278,14 @@ body {
     height: 0;
     border-right: 50vw solid transparent;
     border-top: 0;
-    border-bottom: 48px solid #ebecec;
+    border-bottom: 48px solid rgba(15, 16, 21, 0.98);
 }
 .right-temp-sel {
     width: 0;
     height: 0;
     border-left: 50vw solid transparent;
     border-top: 0;
-    border-bottom: 48px solid #ebecec;
+    border-bottom: 48px solid rgba(15, 16, 21, 0.98);
 }
 .template-selector-an {
     display: flex;
@@ -227,8 +298,8 @@ body {
 .template-img {
     background-size: cover;
     background-position: top;
-    min-width: 357px;
-    height: 442px;
+    min-width: 380px;
+    height: 240px;
 }
 @media screen and (max-width: 533px) {
     .template-img {
@@ -239,15 +310,15 @@ body {
 .pricing-an h1 {
     margin: auto;
     font-size: 40px;
+    color: #bdf3b7;
 }
 .pricing-an {
     padding: 0 6vw;
-    background: #ebecec;
+    background: rgba(15, 16, 21, 0.98);
     padding-bottom: 100px;
 }
 .pricing-flexbox {
     display: flex;
-    justify-content: space-between;
     flex-wrap: wrap;
     margin-top: 70px;
 }
@@ -256,10 +327,10 @@ body {
         justify-content: center;
     }
 }
-.price-item button {
-    background: #279472;
-    color: #fff;
+.pricing-flexbox button {
+    background: #282c34;
     border: none;
+    color: white;
     box-shadow: 0px 0px 14px -2px rgba(0,0,0,0.44);
     align-items: center;
     gap: 10px;
@@ -276,22 +347,41 @@ body {
     bottom: 0;
     padding: 12px 0 12px 0;
 }
-.price-flexbox-inner {
-    width: 270px;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    background: #fafafa;
-    padding: 15px;
-    box-shadow: 0px 0px 14px -2px rgba(0,0,0,0.24);
+
+.pricing-flexbox button:hover {
+    color: #282c34;
+    background: #bdf3b7;
 }
-.price-item-seller {
-    margin-left: -38px;
+
+.price-flexbox-inner {
+    flex: 1;
+    color: white;
+    min-width: 250px;
+    padding: 15px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+.price-flexbox-inner + .price-flexbox-inner {
+    border-left: solid 1px white;
+}
+@media screen and (max-width: 1364px) {
+    .price-flexbox-inner + .price-flexbox-inner {
+        border-left: none;
+    }
 }
 .price-item {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+
+}
+.price-item h3 {
+    color: white;
+    text-decoration: line-through #f33838;
+    margin: 5px;
+    font-size: 25px !important;
+    font-weight: 400;
 }
 @media screen and (max-width: 1410px) {
     .pricing-flexbox {
@@ -303,6 +393,7 @@ body {
 .price-item h1 {
     font-weight: 800;
     margin: 0;
+    color: white;
 }
 .price-item h2 {
     font-weight: 700;
@@ -310,20 +401,21 @@ body {
 }
 .price-item p {
     font-weight: 400;
-    color: #222A2E;
+    color: white;
     font-size: 18px;
 }
 
 .faq {
-    background: #ebecec;
+    background: rgba(15, 16, 21, 0.98);
     display: flex;
     flex-direction: column;
     justify-content: center;
-    padding: 70px 20px 70px 20px;
+    padding: 0 20px 70px 20px;
     align-items: center;
 }
 .faq h1 {
     font-size: 40px;
+    color: white;
 }
 .faq-tree {
     width: 85%;
@@ -334,14 +426,14 @@ body {
 }
 .faq-tree-section {
     text-align: left;
-    color: #104B31;
+    color: #ffffff;
     font-size: 15px !important;
 }
 .faq-tree-item {
-    background: #e0e0e0;
+    background: rgba(15, 16, 21, 0.98);
 }
 .faq-tree-item .MuiTreeItem-label {
-    color: #000000;
+    color: #dedede;
     text-align: left;
     margin: 12px;
     font-size: 18px !important;
@@ -398,19 +490,7 @@ body {
     align-items: center;
     gap: 10px;
 }
-.best-seller {
-    position: relative;
-    background: #a53cbe;
-    color: white;
-    width: 55px;
-    height: 65px;
-    font-size: 12px;
-    top: -15px;
-    left: -15px;
-    padding-left: 4px;
-    padding-right: 4px;
-    border-radius: 0 0 12px 0;
-}
+
 .brief {
     text-align: center;
     color: #5C7481;
@@ -422,7 +502,7 @@ body {
     color: #a0abb0;
 }
 .grey-bg {
-    background: #e5e5e5;
+    background: #000000;
     box-shadow: none;
 }
 .in {

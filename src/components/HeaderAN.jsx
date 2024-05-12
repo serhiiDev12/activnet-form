@@ -39,7 +39,7 @@ export default function Header(props) {
                         <div className="header-text">
                             <h1>{item.title}</h1>
                             <h4>{item.subtext}</h4>
-                            <button onClick={props.start}>GET STARTED <ArrowForward fontSize="large" /></button>
+                            <button onClick={props.start}>GET STARTED <ArrowForward fontSize="large" className="arrow-services" /></button>
                         </div>
                     </div>)
                 }

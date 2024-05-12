@@ -1,4 +1,4 @@
-import React, {useState} from 'react'
+import React, {useEffect, useState} from 'react'
 
 
 import './template2.css'
@@ -10,20 +10,26 @@ import Portfolio from "./components/Portfolio";
 import CompanyNumbers from "./components/CompanyNumbers";
 import Testimonials from "./components/Testimonials";
 import Location from "./components/Location";
-import ColorPicker from "../../components/ColorPicker";
+import ColorPicker from "../../components/ColorPalette";
 import WhyUs from "./components/WhyUs";
 import Footer from "./components/Footer";
 import PortfolioPopup from "./components/PortfolioPopup";
 import ContactForm from "./components/ContactForm";
+import {useNavigate, useParams} from "react-router-dom";
 
-const Template2 = () => {
+const Template2 = (props) => {
     const [showPortfolio, setShowPortfolio] = useState(false);
     const [showContactForm, setShowContactForm] = useState(false);
+    const { color } = useParams();
 
     const openPortfolio = () => {
-        console.log('fdsdfsd')
         setShowPortfolio(true)
     }
+    useEffect(() => {
+        document.documentElement.style
+            .setProperty('--primary-color', '#' + color);
+    }, [color])
+
 
     return (
         <>
@@ -45,9 +51,6 @@ const Template2 = () => {
             <Testimonials/>
             <Location/>
             <Footer />
-            <div className="color-picker">
-                <ColorPicker/>
-            </div>
         </>
     )
 }
