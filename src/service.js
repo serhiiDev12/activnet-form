@@ -9,12 +9,12 @@ const orderToHtml = (orderArray, template, color) => {
             email += "<b>" + item.title + "</b>" + ": " + "<br/>" + item.value + "<br/>";
         })
     })
-    email += `\n Template: ${template.title}, Color: ${color.title}, HEX: ${color.value}`
+    console.log(template.title, color.title, color.value)
+    email += `\n Template: ${template.title}, HEX: #${color.value}`
     return email;
 }
 
 export const sendOrder = async (order, template, color) => {
-    console.log()
     return await fetch('https://ykvqioxa6d.execute-api.us-east-2.amazonaws.com/default/orderReceived', {
         method: "POST",
         mode: "no-cors",
