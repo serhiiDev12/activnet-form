@@ -42,10 +42,7 @@ export default function ChooseTemplate(props) {
                 {
                     renderStuff.map(item =>
                         <div key={item.id} className="template-img" style={{backgroundImage: `url("${item.src}")`}}>
-                            <div className="template-text">
-                                <h1>{item.title}</h1>
-                                <h4>{item.subtext}</h4>
-                            </div>
+
                         </div>)
                 }
             </div>

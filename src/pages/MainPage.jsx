@@ -1,5 +1,6 @@
 import * as React from 'react'
 import './mainStyles.css'
+import './styles.css'
 import { useNavigate } from "react-router-dom";
 import {useEffect, useState} from "react";
 import Loading from "./Loading";

@@ -3,7 +3,7 @@ import {AppBar, Toolbar} from "@mui/material";
 
 export default function NavBar(props) {
     return (
-        <AppBar  position="fixed">
+        <AppBar position="fixed">
             <Toolbar>
                 <div className="templatetwo-nav">
                     <div className="templatetwo-navlogo">

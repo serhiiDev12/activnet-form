@@ -1,5 +1,4 @@
 import './App.css';
-import InquiryForm from "./pages/InquiryForm";
 import logo from './logo.svg'
 import {Provider} from "react-redux";
 import {store} from './store'

@@ -3,13 +3,13 @@ import {
     createBrowserRouter,
 } from "react-router-dom";
 import MainPage from "./pages/MainPage";
-import InquiryForm from "./pages/InquiryForm";
 import TemplateOne from "./websites/template1/TemplateOne";
 import TemplateTwo from "./websites/template2/TemplateTwo";
 import TemplateThree from "./websites/template3/TemplateThree";
 import Designer from "./pages/Designer";
 import SuccessPage from "./pages/SuccessPage";
 import TemplateViewer from "./pages/TemplateViewer";
+import InfoForm from "./pages/InfoForm";
 
 export const router = createBrowserRouter([
     {
@@ -21,12 +21,12 @@ export const router = createBrowserRouter([
         element: <TemplateViewer />,
     },
     {
-        path: "/order-website",
-        element: <InquiryForm />,
-    },
-    {
         path: "/order-design",
         element: <Designer />,
+    },
+    {
+        path: "/info-form",
+        element: <InfoForm />,
     },
     {
         path: "/success",
