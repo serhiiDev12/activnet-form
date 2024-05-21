@@ -1,6 +1,30 @@
 .info-form {
     display: grid;
     grid-template-columns: 400px 1fr;
+    background: url("https://images.unsplash.com/photo-1446776653964-20c1d3a81b06?q=80&w=2071&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D");
+    background-position: center;
+    background-size: cover;
+    background-attachment: fixed;
+}
+.display-controlled {
+    display: none !important;
+}
+@media screen and (max-width: 1000px) {
+    .info-form {
+        display: flex;
+        flex-direction: column;
+        overflow-x: hidden;
+    }
+    .steps {
+        display: none;
+    }
+    .form {
+        width: 90% !important;
+    }
+    .display-controlled {
+        display: flex !important;
+        color: #282c34 !important;
+    }
 }
 .info-form-steps {
     display: flex;
@@ -8,8 +32,8 @@
     align-items: flex-start;
     margin: auto;
 }
-.steps {
-    background: #282c34;
+.steps-cover {
+    background: rgba(40, 44, 52, 0.93);
     display: flex;
     flex-direction: column;
     align-items: flex-start;
@@ -68,10 +92,9 @@
 }
 
 .centered-form {
-    background: #e0e0e0;
+    background: rgba(224, 224, 224, 1);
     display: flex;
     flex-direction: column;
-    justify-content: center;
     align-items: center;
 }
 .form-flex-box {

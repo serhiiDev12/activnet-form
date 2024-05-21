@@ -46,10 +46,6 @@ export default function TemplateViewer() {
     const dispatch = useDispatch()
     const { template, color } = useSelector(state => state)
 
-    useEffect(() => {
-        dispatch(setTemplate(renderStuff[0]));
-    }, [ref]);
-
     const setSelectedTemplate = (id) => {
         dispatch(setTemplate(renderStuff.find(item => item.id === id)));
     }

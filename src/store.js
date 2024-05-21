@@ -1,10 +1,17 @@
 import {createSlice, configureStore, combineReducers} from '@reduxjs/toolkit'
 import {useDispatch, useSelector} from "react-redux";
+import tmp1 from "./components/Template1.png";
 
 const orderSlice = createSlice({
     name: 'order',
     initialState: {
-        template: {},
+        template: {
+            id: 111,
+            title: "Template 1",
+            subtext: "",
+            route: "/order-website/templateOne",
+            src: tmp1
+        },
         color: {
             name: "Green",
             value: "00796B"
@@ -34,7 +41,7 @@ const orderSlice = createSlice({
                 ]
             },
             {
-                id: 5,
+                id: 3,
                 title: "Company Values",
                 subtitle: "Your company values are important to stand out your business",
                 fields: [
@@ -45,7 +52,7 @@ const orderSlice = createSlice({
                 ]
             },
             {
-                id: 6,
+                id: 4,
                 title: "Features",
                 subtitle: "Please select integrations that will define your website functionality",
                 fields: [
@@ -54,6 +61,12 @@ const orderSlice = createSlice({
                     {id: 33333, title: "I want to provide my own images and text", fieldType: 3, value: false},
                     {id: 44444, title: "Additional preferences or changes you want to make?", fieldType: 1, value: "", controlledBy: 13},
                 ]
+            },
+            {
+                id: 5,
+                title: "Done",
+                subtitle: "Verify your order info",
+                fields: []
             }
         ]
     },

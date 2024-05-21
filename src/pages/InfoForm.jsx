@@ -8,6 +8,7 @@ import Loading from "./Loading";
 import {Box, Button, Checkbox, FormControlLabel, FormGroup, MenuItem, TextField} from "@mui/material";
 import {changeValue} from "../store";
 import {ArrowBack, Done} from "@mui/icons-material";
+import ReviewInfo from "../components/ReviewInfo";
 
 function validPhoneInputCharacter(input) {
     let keyCode = input.keyCode;
@@ -95,32 +96,35 @@ export default function InfoForm() {
             }
             <div className="info-form">
                 <div className="steps">
-                    <button className="back-futton-info" onClick={() => navigate('/website-viewer')}>
-                        <ArrowBack fontSize="large" />
-                        BACK
-                    </button>
-                    <div className="info-form-steps">
-                        {orderForm.map((item, index) => (
-                            <React.Fragment key={index}>
+                    <div className="steps-cover">
+                        <button className="back-futton-info" onClick={() => navigate('/website-viewer')}>
+                            <ArrowBack fontSize="large"/>
+                            BACK
+                        </button>
+                        <div className="info-form-steps">
+                            {orderForm.map((item, index) => (
+                                <React.Fragment key={index}>
 
-                                <div className={"step " + +(step >= index && "current-step")}>
-                                    <div className={"step-number " + (step >= index && "current-step")}>
-                                        <p className={(step >= index && "current-step-text")}>
-                                            {(step > index ? <Done sx={{color: "#bdf3b7"}} fontSize="large" /> : index + 1)}
-                                        </p>
+                                    <div className={"step " + +(step >= index && "current-step")}>
+                                        <div className={"step-number " + (step >= index && "current-step")}>
+                                            <p className={(step >= index && "current-step-text")}>
+                                                {(step > index ?
+                                                    <Done sx={{color: "#bdf3b7"}} fontSize="large"/> : index + 1)}
+                                            </p>
+                                        </div>
+                                        <h3 className={(step >= index && "current-step-text")}>{item.title}</h3>
                                     </div>
-                                    <h3 className={(step >= index && "current-step-text")}>{item.title}</h3>
-                                </div>
-                                {
-                                    orderForm.length - 1 !== index &&
-                                    <>
-                                        <div className={"dot " + (step > index && 'current-step-dot')}></div>
-                                        <div className={"dot " + (step > index && 'current-step-dot')}></div>
-                                        <div className={"dot " + (step > index && 'current-step-dot')}></div>
-                                    </>
-                                }
-                            </React.Fragment>
-                        ))}
+                                    {
+                                        orderForm.length - 1 !== index &&
+                                        <>
+                                            <div className={"dot " + (step > index && 'current-step-dot')}></div>
+                                            <div className={"dot " + (step > index && 'current-step-dot')}></div>
+                                            <div className={"dot " + (step > index && 'current-step-dot')}></div>
+                                        </>
+                                    }
+                                </React.Fragment>
+                            ))}
+                        </div>
                     </div>
                 </div>
                 <div className="centered-form">
@@ -139,6 +143,7 @@ export default function InfoForm() {
                             <h3>{orderForm[step].title}</h3>
                             <p>{orderForm[step].subtitle}</p>
                             <div className="form-flex-box">{
+                                step !== 4 &&
                                 orderForm[step].fields.map(item => {
                                     if (item.fieldType === 1) {
                                         return (
@@ -257,7 +262,12 @@ export default function InfoForm() {
                                         );
                                     }
                                 })
-                            }</div>
+                            }
+                                {
+                                    step === 4 &&
+                                    <ReviewInfo/>
+                                }
+                            </div>
                         </div>
                         <div className="stepper">
                             <Button onClick={stepBack} disabled={step === 0}>Back</Button>
@@ -273,6 +283,11 @@ export default function InfoForm() {
                                               onClick={stepNext}>Next</Button>
                             }
                         </div>
+                        <button className="back-futton-info display-controlled"
+                                onClick={() => navigate('/website-viewer')}>
+                            <ArrowBack fontSize="large"/>
+                            BACK
+                        </button>
                     </Box>
                 </div>
             </div>

@@ -3,11 +3,28 @@
     grid-template-columns: 350px 1fr;
     height: 100vh;
 }
+.change-template {
+    display: none !important;
+}
+@media screen and (max-width: 1000px) {
+    .template-viewer {
+        display: flex;
+        flex-direction: column;
+        overflow-x: hidden;
+    }
+    .template-selector-side {
+        position: absolute;
+        left: -100vh;
+    }
+    .change-template {
+        display: block !important;
+    }
+}
 .template-selector-side {
     display: flex;
     flex-direction: column;
     align-items: center;
-    background: #282c34;
+    background: rgba(40, 44, 52, 0.94);
     overflow: auto;
 }
 .template-selector-side h2 {
@@ -56,8 +73,9 @@
     display: flex;
     flex-direction: row-reverse;
     justify-content: space-between;
-    background: #282c34;
-    padding: 15px;
+    background: rgba(40, 44, 52, 0.96);
+    padding: 17px;
+    margin-top: -4px;
 }
 .template-show {
     display: flex;
@@ -115,4 +133,11 @@
     flex-direction: row-reverse;
     justify-content: space-between;
     width: 100%;
+}
+.centered-form {
+    height: 100vh;
+    overflow: auto;
+}
+.review-info {
+    text-align: left;
 }
