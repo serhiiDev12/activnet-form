@@ -1,6 +1,10 @@
 import * as React from 'react';
 import {ArrowBack, ArrowForward} from "@mui/icons-material";
 import Carousel from "react-material-ui-carousel";
+import {TextField} from "@mui/material";
+import {useEffect, useState} from "react";
+import lightbulb from './lightbulb.svg'
+import logo from './logo.svg'
 
 const renderStuff = [
     {
@@ -24,26 +28,45 @@ const renderStuff = [
 ]
 
 export default function Header(props) {
+
+    const [email, emailChange] = useState("")
+
     return (
         <div id="about" className="main-page-header">
-            <Carousel
-                className="main-page-header"
-                NextIcon={<ArrowForward />}
-                PrevIcon={<ArrowBack />}
-                animation="slide"
-                navButtonsAlwaysVisible={false}
-                interval={8000}
-            >
-                {
-                    renderStuff.map(item => <div key={item.id} className="header-img-format main-page-header" style={{backgroundImage: `url("${item.src}")`}}>
-                        <div className="header-text">
-                            <h1>{item.title}</h1>
-                            <h4>{item.subtext}</h4>
-                            <button onClick={props.start}>GET STARTED <ArrowForward fontSize="large" className="arrow-services" /></button>
+            <div className="apendix-bordering">
+                <div className="border"></div>
+                <div className="apendix">
+                    <div className="wave"></div>
+                    <button>Contact Us</button>
+                </div>
+            </div>
+            <div className="header-img-format">
+                <div className="header-text">
+                    <img src={logo} alt=""/>
+                    <div className="h1-title">
+                        <h1>POWER YOUR IDEAS WITH WEBSITE</h1>
+                    </div>
+                    <div className="become-client form">
+                        <h1>FREE CONSULTATION</h1>
+                        <p>Let's discuss best option for you</p>
+                        <div className="become-client-form">
+                            <input
+                                className="header-text-form"
+                                placeholder="Email"
+                                value={email}
+                                onChange={(e) => emailChange(e.target.value)}
+                            />
+                            <div
+                                className="header-text-form-button">
+                                <ArrowForward/>
+                            </div>
                         </div>
-                    </div>)
-                }
-            </Carousel>
+                    </div>
+                </div>
+                <div className="lightbulb">
+                    <img src={lightbulb} alt=""/>
+                </div>
+            </div>
         </div>
     );
 }

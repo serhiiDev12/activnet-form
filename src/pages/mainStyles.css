@@ -2,18 +2,162 @@ body {
     overflow-x: hidden;
 }
 .main-page-header {
+    height: 100%;
+    padding: 20px;
+    background: #282c34;
+    display: flex;
+    flex-direction: column;
+    justify-content: right;
+}
+.border {
+    background: #bdf3b7;
+    height: 70px;
+    width: 104px;
+}
+.apendix-bordering {
+    height: 100%;
+    background: #282c34;
+    display: flex;
+    position: relative;
+    align-self: flex-end;
+    width: 30%;
+    justify-content: center;
+    align-items: center;
+}
+.apendix {
     width: 100%;
-    height: 100vh;
+    background: #bdf3b7;
+    height: 70px;
+    align-self: flex-end;
+    border-radius: 20px 12px 0 0;
+    display: flex;
+    flex-direction: row-reverse;
+    padding-right: 20px;
+    align-items: center;
+}
+.apendix button {
+    background: #282c34;
+    color: white;
+    padding: 12px 25px;
+    outline: none;
+    border-radius: 22px;
+    font-size: 16px;
+    font-weight: 300;
+    cursor: pointer;
+    transition: 0.2s;
+    border: 1px solid transparent;
+}
+.contact-us-button {
+    background: #bdf3b7;
+    color: #282c34;
+    padding: 12px 25px;
+    outline: none;
+    border-radius: 22px;
+    position: absolute;
+    right: 0;
+    margin-right: 10%;
+    font-size: 16px;
+    font-weight: 300;
+    margin-top: 8px;
+    cursor: pointer;
+    transition: all 0.3s ease-out;
+    align-self: end;
+    border: 1px solid transparent;
+}
+.contact-us-button:hover {
+    background: #282c34;
+    border: 1px solid #bdf3b7;
+    color: #bdf3b7;
+}
+.apendix button:hover {
+    background: #bdf3b7;
+    border: 1px solid #282c34;
+    color: #282c34;
+}
+.lightbulb {
+    margin-top: -50px;
+    margin-right: 10vw;
+}
+.h1-title h1 {
+    color: #282c34 !important;
+    width: 40vw;
+}
+
+@media screen and (max-width: 1070px) {
+    .h1-title h1 {
+        display: none;
+    }
+    .become-client h1 {
+        font-size: 40px !important;
+    }
+}
+@media screen and (max-width: 1070px) {
+    nav {
+        width: 100% !important;
+    }
+    .header-img-format {
+        border-radius: 12px !important;
+    }
+}
+.header-img-format {
+    height: 600px;
+    border-radius: 12px 0 12px 12px;
+    background: url("../components/backgroundServices.svg");
+    background-position: center;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.become-client h1 {
+    color: #282c34 !important;
 }
 .header-text {
-    height: 100%;
+    color: #282c34;
+    padding: 0 40px;
     display: flex;
-    padding: 0 5vw 0 5vw;
     flex-direction: column;
+    justify-content: left;
+    align-items: baseline;
+    height: 90%;
+}
+.header-text h1 {
+    color: white;
+}
+.become-client-form {
+    display: flex;
+}
+.header-text-form {
+    background: transparent;
+    border: none;
+    border-bottom: 1px solid #282c34;
+    padding: 15px 15px;
+    width: 300px;
+    font-size: 18px;
+}
+.header-text-form:focus {
+    background: #addea7;
+    outline: none;
+}
+.header-text-form-button {
+    background: transparent;
+    width: 60px;
+    height: 60px;
+    color: black;
+    display: flex;
+    align-items: center;
     justify-content: center;
-    background: rgba(34, 39, 51, 0.6);
-    background: linear-gradient(0deg, rgba(0,0,0, 1) 0%, rgba(34, 39, 51,0.2) 100%);
-    border-top: 2px solid #104B31;
+    cursor: pointer;
+    transition: 0.3s;
+    border-bottom: 1px solid #282c34;
+}
+.header-text-form-button:hover {
+    background-color: #282c34;
+    color: #fff;
+}
+.become-client {
+    display: flex;
+    flex-direction: column;
+    justify-content: left;
 }
 .header-text button {
     background: none;
@@ -41,11 +185,14 @@ body {
     padding-bottom: 12px;
 }
 .header-text h1 {
-    color: #bdf3b7;
     text-align: left;
-    font-size: 40px;
-    font-weight: 500;
+    font-size: 50px;
+    font-weight: 600;
     margin-bottom: 0;
+    width: 40vw;
+}
+.header-text h1 span {
+    color: #bdf3b7;
 }
 @media screen and (max-width: 1640px) {
     .pricing-carousel{
@@ -79,7 +226,8 @@ body {
 }
 .services-an {
     display: flex;
-    background-size: cover;
+    background: url("../components/backgroundServices.svg");
+    background-position: center;
     align-items: center;
 }
 @media screen and (max-width: 600px) {
@@ -93,7 +241,7 @@ body {
 .services-an h1 {
     font-weight: 500;
     font-size: 30px;
-    color: #bdf3b7;
+    color: #282c34;
     text-align: left;
 }
 .services-desc {
@@ -105,7 +253,7 @@ body {
     margin: 0;
     font-size: 20px;
     padding-top: 10px;
-    color: #bdf3b7;
+    color: #282c34;
 }
 .services-desc p {
     font-size: 16px !important;
@@ -121,10 +269,13 @@ body {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     grid-template-rows: repeat(2, 1fr);
+    gap: 20px;
     flex: 1;
 }
 .services-sidebyside {
     display: flex;
+    justify-content: center;
+    gap: 40px;
 }
 @media screen and (max-width: 1430px) {
     .services-an-flex {
@@ -149,6 +300,7 @@ body {
     }
     .arrow-service {
         display: none !important;
+        color: #282c34;
     }
 }
 @media screen and (max-width: 600px) {
@@ -164,7 +316,7 @@ body {
     font-weight: 300;
     font-size: 20px;
     text-align: left;
-    color: white;
+    color: #282c34;
 }
 .services-an-background button {
     background: #282c34;
@@ -179,20 +331,20 @@ body {
     margin-top: 50px;
 }
 .services-an-background button:hover {
-    color: #282c34;
-    background: #bdf3b7;
+    color: #bdf3b7;
     padding: 15px 50px;
 }
 .services-an-background {
     padding: 50px;
     width: 100%;
     height: 100%;
-    background: linear-gradient(180deg, rgba(0,0,0, 1) 0%, rgba(15, 16, 21, 0.8) 100%);
+    background: linear-gradient(180deg, rgba(255, 255, 255, 0.2) 0%, rgba(255, 255, 255, 0.5) 100%);
 }
 
 .service-an-item p {
     text-align: left;
     color: white;
+    color: #282c34;
 }
 @media screen and (max-width: 1430px) {
     .service-an-item {
@@ -202,29 +354,45 @@ body {
     }
 }
 .service-an-item {
-    border-top: 1px solid white;
-    cursor: pointer;
-    margin: 20px;
-    display: flex;
-    justify-content: left;
+    background: #282c34;
+    border-radius: 12px;
     align-items: center;
+    display: flex;
+    justify-content: center;
+    padding: 20px;
+    -webkit-box-shadow: 0px 0px 11px -4px rgba(0,0,0,0.75);
+    -moz-box-shadow: 0px 0px 11px -4px rgba(0,0,0,0.75);
+    box-shadow: 0px 0px 11px -4px rgba(0,0,0,0.75);
 }
 .arrow-service {
-    color: white;
+    color: #282c34;
+}
+.services-logo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+@media screen and (max-width: 1070px) {
+    .services-logo {
+        display: none;
+    }
+}
+.services-logo img {
+    opacity: 0.7;
 }
 .service-an-item h4 {
-    color: white;
-    padding-bottom: 20px;
+    color: #bdf3b7;
     font-size: 22px;
     margin: 0;
-    text-align: left;
     font-weight: 700;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     width: min-content;
-    margin-right: 16px;
     transition: 0.3s;
 }
 .service-an-item h4:hover {
-    color: #bdf3b7;
+    color: #282c34;
     margin-right: 20px;
 }
 
@@ -300,6 +468,7 @@ body {
     background-position: top;
     min-width: 380px;
     height: 240px;
+    border-radius: 8px;
 }
 @media screen and (max-width: 533px) {
     .template-img {

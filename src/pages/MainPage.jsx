@@ -13,6 +13,7 @@ import ChooseTemplate from "../components/ChooseTemplate";
 import Pricing from "../components/Pricing";
 import Faq from "../components/Faq";
 import Footer from "../components/Footer";
+import logoHeader from './header.svg'
 
 export default function MainPage() {
     const [showLoading, setShowLoading] = useState(true);
@@ -28,7 +29,7 @@ export default function MainPage() {
     useEffect(() => {
         if (typeof window !== "undefined") {
             window.addEventListener("scroll", () =>
-                setSmall(window.pageYOffset > 200)
+                setSmall(window.pageYOffset > 100)
             );
         }
     }, []);
@@ -63,17 +64,16 @@ export default function MainPage() {
                 <Loading />
             }
             <header>
-                <nav style={{
-                    backgroundColor: !small ? "transparent": "black",
-                    transition: "all 0.3s"
-                }}>
-                    <img className="activnet" src="./logo.svg" alt="ActivNet" />
-                        <a href="#about">About</a>
-                        <a href="#templates">Templates</a>
-                        <a href="#prices">Pricing</a>
+                <nav style={{width: small ? "100%" : ""}}>
+                    <img className="activnet" src={logoHeader} alt="ActivNet" height={20}/>
+                    <a href="#about">About</a>
+                    <a href="#templates">Templates</a>
+                    <a href="#prices">Pricing</a>
+
+                    {small && <button className="contact-us-button">Contact Us</button>}
                 </nav>
             </header>
-                <Header start={startWebsiteCreate} />
+            <Header start={startWebsiteCreate} />
                 <div className="map-section">
                     <ServicesAN start={startWebsiteCreate} />
                     <ChooseTemplate start={startWebsiteCreate} />

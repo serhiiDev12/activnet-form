@@ -2,6 +2,7 @@ import * as React from 'react';
 import { Box} from "@mui/material";
 import {useState} from "react";
 import {ArrowForward} from "@mui/icons-material";
+import services from './services.svg'
 
 const servicesDetails = [
     {
@@ -51,14 +52,8 @@ export default function ServicesAN(props) {
         <div className="services-an">
             <div className="services-an-background">
                 <div className="services-sidebyside">
-                    <div className="services-image">
-                        <div className="services-image-bg" style={{background: `url(${getSelectedObject().img})`}}>
-                            <div className="services-desc">
-                                <h4>{getSelectedObject().title}</h4>
-                                <p>{getSelectedObject().description}</p>
-                                <p>{getSelectedObject().descriptionTwo}</p>
-                            </div>
-                        </div>
+                    <div className="services-logo">
+                        <img src={services} alt="" width={600}/>
                     </div>
                     <div className="service-margins">
                         <h1>Services we provide will satisfy every business</h1>
@@ -70,7 +65,6 @@ export default function ServicesAN(props) {
                                     <Box key={item.id} className="service-an-item"
                                          onClick={() => setSelectedService(item.id)}>
                                         <h4>{item.title}</h4>
-                                        <ArrowForward fontSize="large" className="arrow-service" />
                                     </Box>
                                 )
                             }
