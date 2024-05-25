@@ -397,7 +397,7 @@ body {
 }
 
 .choose-template-an {
-    background-color: rgba(15, 16, 21, 0.98);
+    background: #282c34;
     padding-bottom: 70px;
 }
 .choose-template-an button {
@@ -446,14 +446,14 @@ body {
     height: 0;
     border-right: 50vw solid transparent;
     border-top: 0;
-    border-bottom: 48px solid rgba(15, 16, 21, 0.98);
+    border-bottom: 48px solid rgb(40, 44, 52);
 }
 .right-temp-sel {
     width: 0;
     height: 0;
     border-left: 50vw solid transparent;
     border-top: 0;
-    border-bottom: 48px solid rgba(15, 16, 21, 0.98);
+    border-bottom: 48px solid rgb(40, 44, 52);
 }
 .template-selector-an {
     display: flex;
@@ -483,7 +483,7 @@ body {
 }
 .pricing-an {
     padding: 0 6vw;
-    background: rgba(15, 16, 21, 0.98);
+    background: #282c34;
     padding-bottom: 100px;
 }
 .pricing-flexbox {
@@ -575,7 +575,7 @@ body {
 }
 
 .faq {
-    background: rgba(15, 16, 21, 0.98);
+    background: #282c34;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -610,7 +610,7 @@ body {
 
 .footer-an {
     height: 500px;
-    background: rgba(0,0,0,80%);
+    background: rgba(189, 243, 183, 0.9);
     display: flex;
     width: 100%;
     align-items: center;
@@ -628,17 +628,17 @@ body {
     text-align: left;
 }
 .footer-am-content-links h2 {
-    color: #d9d9d9;
+    color: #282c34;
     font-size: 16px;
 }
 .footer-am-content-links p {
-    color: #d9d9d9;
+    color: #282c34;
     font-size: 16px;
     line-height: 16px;
 }
 .footer-am-content-links a {
     text-decoration: none;
-    color: white;
+    color: #282c34;
     cursor: pointer;
     font-size: 16px;
     line-height: 16px;

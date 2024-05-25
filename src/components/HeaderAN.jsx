@@ -44,7 +44,7 @@ export default function Header(props) {
                 <div className="header-text">
                     <img src={logo} alt=""/>
                     <div className="h1-title">
-                        <h1>POWER YOUR IDEAS WITH WEBSITE</h1>
+                        <h1>DESIGN.<br/> DEVELOPMENT.<br/> MAINTENANCE.<br/></h1>
                     </div>
                     <div className="become-client form">
                         <h1>FREE CONSULTATION</h1>

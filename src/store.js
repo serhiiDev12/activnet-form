@@ -24,10 +24,10 @@ const orderSlice = createSlice({
                 fields: [
                     {id: 11, title: "Name", value: "", fieldType: 1, required: true},
                     {id: 12, title: "Personal Email", fieldType: 5, required: true, value: "" },
-                    {id: 13, title: "Personal Phone", fieldType: 6, required: true, value: "" },
-                    {id: 14, title: "Company Phone", fieldType: 6, value: "", required: true},
-                    {id: 15, title: "Company Email", fieldType: 5, value: "", required: true},
-                    {id: 16, title: "Company location (optional)", fieldType: 2, value: "", required: true},
+                    {id: 13, title: "Personal Phone (optional)", fieldType: 6, required: false, value: "" },
+                    {id: 14, title: "Company Phone (optional)", fieldType: 6, value: "", required: false},
+                    {id: 15, title: "Company Email (optional)", fieldType: 5, value: "", required: false},
+                    {id: 16, title: "Company location (optional)", fieldType: 2, value: "", required: false},
                 ]
             },
             {
@@ -35,9 +35,9 @@ const orderSlice = createSlice({
                 title: "Business Details",
                 subtitle: "We'll use this info to fill up the website best way possible",
                 fields: [
-                    {id: 111, title: "Business Name and/or Website name", fieldType: 1, value: "", required: true},
-                    {id: 222, title: "Business Description", value: "", fieldType: 2, required: true},
-                    {id: 333, title: "Company social media (list separated with comma (,))", fieldType: 2, value: "", required: true}
+                    {id: 111, title: "Business Name and/or Website name (optional)", fieldType: 1, value: "", required: false},
+                    {id: 222, title: "Business Description (optional)", value: "", fieldType: 2, required: false},
+                    {id: 333, title: "Company social media (list separated with comma)", fieldType: 2, value: "", required: false}
                 ]
             },
             {
@@ -45,10 +45,10 @@ const orderSlice = createSlice({
                 title: "Company Values",
                 subtitle: "Your company values are important to stand out your business",
                 fields: [
-                    {id: 1111, title: "Provide recent metrics that out stand your company", fieldType: 2, value: "", required: true},
-                    {id: 2222, title: "Achievements you most proud of", value: "", fieldType: 2, required: true},
-                    {id: 3333, title: "Company Values", fieldType: 2, value: "", required: true},
-                    {id: 4444, title: "Company goals", fieldType: 2, value: "", required: true},
+                    {id: 1111, title: "Provide recent metrics that out stand your company", fieldType: 2, value: "", required: false},
+                    {id: 2222, title: "Achievements you most proud of", value: "", fieldType: 2, required: false},
+                    {id: 3333, title: "Company Values", fieldType: 2, value: "", required: false},
+                    {id: 4444, title: "Company goals", fieldType: 2, value: "", required: false},
                 ]
             },
             {
