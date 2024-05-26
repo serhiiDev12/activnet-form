@@ -33,16 +33,9 @@ export default function Header(props) {
 
     return (
         <div id="about" className="main-page-header">
-            <div className="apendix-bordering">
-                <div className="border"></div>
-                <div className="apendix">
-                    <div className="wave"></div>
-                    <button>Contact Us</button>
-                </div>
-            </div>
             <div className="header-img-format">
                 <div className="header-text">
-                    <img src={logo} alt=""/>
+                    <button className="contact-buttom" onClick={() => props.openPopover("")}>CONTACT US</button>
                     <div className="h1-title">
                         <h1>DESIGN.<br/> DEVELOPMENT.<br/> MAINTENANCE.<br/></h1>
                     </div>
@@ -57,6 +50,7 @@ export default function Header(props) {
                                 onChange={(e) => emailChange(e.target.value)}
                             />
                             <div
+                                onClick={() => props.openPopover(email)}
                                 className="header-text-form-button">
                                 <ArrowForward/>
                             </div>

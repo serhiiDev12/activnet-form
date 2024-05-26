@@ -1,17 +1,17 @@
 .wrapper {}
 nav {
-    background: #282c34;
+    background: none;
     width: 75%;
 
     gap: 33px;
     margin: auto;
-    padding: 30px 40px;
+    padding: 20px 40px;
     display: flex;
     position: fixed;
     align-items: center;
     top: 0;
     z-index: 999;
-    transition: all 0.3s ease-out;
+    transition: 0.3s;
     border-radius: 0 0 18px 0;
 }
 .activnet {

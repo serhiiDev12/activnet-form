@@ -50,7 +50,7 @@ body {
 .contact-us-button {
     background: #bdf3b7;
     color: #282c34;
-    padding: 12px 25px;
+    padding: 5px 25px;
     outline: none;
     border-radius: 22px;
     position: absolute;
@@ -74,8 +74,29 @@ body {
     border: 1px solid #282c34;
     color: #282c34;
 }
+
+.contact-form-button {
+    background: #bdf3b7;
+    color: #282c34;
+    padding: 15px 25px;
+    outline: none;
+    width: 100%;
+    border-radius: 22px;
+    font-size: 16px;
+    font-weight: 300;
+    margin-top: 8px;
+    cursor: pointer;
+    transition: all 0.3s ease-out;
+    align-self: end;
+    border: 1px solid transparent;
+}
+.contact-form-button:hover {
+     background: #bdf3b7;
+     border: 1px solid #282c34;
+     color: #282c34;
+}
 .lightbulb {
-    margin-top: -50px;
+    margin-top: 30px;
     margin-right: 10vw;
 }
 .h1-title h1 {
@@ -85,10 +106,10 @@ body {
 
 @media screen and (max-width: 1070px) {
     .h1-title h1 {
-        display: none;
+        font-size: 30px !important;
     }
     .become-client h1 {
-        font-size: 40px !important;
+        font-size: 35px !important;
     }
 }
 @media screen and (max-width: 1070px) {
@@ -99,11 +120,26 @@ body {
         border-radius: 12px !important;
     }
 }
+.loading-contact-form {
+    position: absolute;
+    background: white;
+    width: 305px;
+    height: 429px;
+    z-index: 2;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.succes-form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
 .header-img-format {
-    height: 600px;
-    border-radius: 12px 0 12px 12px;
-    background: url("../components/backgroundServices.svg");
-    background-position: center;
+    height: 650px;
+    border-radius: 12px;
+    background: url("../components/background.svg");
+    background-size: cover;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -111,14 +147,37 @@ body {
 .become-client h1 {
     color: #282c34 !important;
 }
+.contact-buttom {
+    cursor: pointer;
+    position: absolute;
+    right: 90px;
+    top: 35px;
+    background: #282c34;
+    color: white;
+    padding: 10px 2vw;
+    border-radius: 20px;
+    transition: 0.3s;
+    border: 1px solid transparent;
+}
+.contact-buttom:hover {
+    background: #bdf3b7;
+    color: #282c34;
+    border: 1px solid #282c34;
+}
+@media screen and (max-width: 1270px) {
+
+    .contact-buttom {
+        display: none;
+    }
+}
 .header-text {
     color: #282c34;
-    padding: 0 40px;
+    padding: 40px;
     display: flex;
     flex-direction: column;
     justify-content: left;
     align-items: baseline;
-    height: 90%;
+    height: 80%;
 }
 .header-text h1 {
     color: white;
@@ -158,23 +217,6 @@ body {
     display: flex;
     flex-direction: column;
     justify-content: left;
-}
-.header-text button {
-    background: none;
-    border: none;
-    color: white;
-    display: flex;
-    align-items: center;
-    gap: 10px;
-    font-size: 20px;
-    cursor: pointer;
-    transition: 0.3s;
-    padding-bottom: 15px;
-    padding-top: 15px;
-}
-.header-text button:hover {
-    color: #bdf3b7;
-    gap: 20px;
 }
 .header-text h4 {
     color: #e8e8e8;
@@ -311,6 +353,9 @@ body {
 .service-margins {
     margin-left: 20px;
     margin-right: 20px;
+}
+.service-margins p {
+    margin-bottom: 20px;
 }
 .services-an-background p {
     font-weight: 300;
@@ -466,7 +511,7 @@ body {
 .template-img {
     background-size: cover;
     background-position: top;
-    min-width: 380px;
+    min-width: 350px;
     height: 240px;
     border-radius: 8px;
 }
@@ -489,6 +534,7 @@ body {
 .pricing-flexbox {
     display: flex;
     flex-wrap: wrap;
+    gap: 12px;
     margin-top: 70px;
 }
 @media screen and (max-width: 600px) {
@@ -524,15 +570,15 @@ body {
 
 .price-flexbox-inner {
     flex: 1;
-    color: white;
+    color: #282c34;
+    background-image: url("../components/price.svg");
+    background-size: cover;
     min-width: 250px;
-    padding: 15px;
+    padding: 40px 15px 15px 15px;
     display: flex;
+    border-radius: 12px;
     flex-direction: column;
     justify-content: space-between;
-}
-.price-flexbox-inner + .price-flexbox-inner {
-    border-left: solid 1px white;
 }
 @media screen and (max-width: 1364px) {
     .price-flexbox-inner + .price-flexbox-inner {
@@ -546,7 +592,7 @@ body {
 
 }
 .price-item h3 {
-    color: white;
+    color: #282c34;
     text-decoration: line-through #f33838;
     margin: 5px;
     font-size: 25px !important;
@@ -562,7 +608,7 @@ body {
 .price-item h1 {
     font-weight: 800;
     margin: 0;
-    color: white;
+    color: #282c34;
 }
 .price-item h2 {
     font-weight: 700;
@@ -570,7 +616,7 @@ body {
 }
 .price-item p {
     font-weight: 400;
-    color: white;
+    color: #282c34;
     font-size: 18px;
 }
 
@@ -610,7 +656,7 @@ body {
 
 .footer-an {
     height: 500px;
-    background: rgba(189, 243, 183, 0.9);
+    background: rgba(255, 255, 255, 0.9);
     display: flex;
     width: 100%;
     align-items: center;
@@ -621,6 +667,9 @@ body {
     padding: 0 7vw;
     flex-direction: row;
     justify-content: space-between;
+}
+.contact-header {
+    margin: 0;
 }
 .footer-am-content-links {
     display: flex;
@@ -671,7 +720,7 @@ body {
     color: #a0abb0;
 }
 .grey-bg {
-    background: #000000;
+    background: rgba(158, 178, 156, 0.9);
     box-shadow: none;
 }
 .in {
@@ -697,6 +746,15 @@ body {
 @media screen and (max-width: 890px) {
     .form-design {
         max-width: 100%;
+    }
+    .contact-us-button {
+        display: none;
+    }
+    .lightbulb {
+        display: none;
+    }
+    .header-text-form {
+        width: 150px;
     }
 }
 .form-design h3{

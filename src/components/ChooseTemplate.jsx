@@ -36,8 +36,8 @@ export default function ChooseTemplate(props) {
                 <div className="left-temp-sel"></div>
                 <div className="right-temp-sel"></div>
             </div>
-            <h1>Choose ready template</h1>
-            <p>We can deliver a ready template with features you need quickly!</p>
+            <h1>Look at our ready template</h1>
+            <p>We can deliver a ready template with features you need quickly! </p>
             <div className="template-selector-an">
                 {
                     renderStuff.map(item =>

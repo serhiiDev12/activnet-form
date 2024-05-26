@@ -27,3 +27,17 @@ export const sendOrder = async (order, template, color) => {
         body: orderToHtml(order, template, color)
     }).then(res => res.data)
 }
+
+export const sendContactForm = async (form) => {
+    return await fetch('https://ykvqioxa6d.execute-api.us-east-2.amazonaws.com/default/orderReceived', {
+        method: "POST",
+        mode: "no-cors",
+        cache: "no-cache",
+        headers: {
+            "Content-Type": "application/json",
+            // 'Content-Type': 'application/x-www-form-urlencoded',
+        },
+        referrerPolicy: "no-referrer",
+        body: `${form.email}, ${form.body}`
+    }).then(res => res.data)
+}
