@@ -31,7 +31,7 @@ export default function Footer() {
                         onClick={() => window.open('https://www.linkedin.com/company/activnetech/about/', '_blank')}
                         fontSize="large"
                         className="in"
-                        sx={{color: "white"}}
+                        sx={{color: "black"}}
                     />
                 </div>
             </div>

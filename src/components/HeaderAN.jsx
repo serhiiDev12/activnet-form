@@ -39,7 +39,7 @@ export default function Header(props) {
                     <div className="h1-title">
                         <h1>DESIGN.<br/> DEVELOPMENT.<br/> MAINTENANCE.<br/></h1>
                     </div>
-                    <div className="become-client form">
+                    <div className="become-client">
                         <h1>FREE CONSULTATION</h1>
                         <p>Let's discuss best option for you</p>
                         <div className="become-client-form">

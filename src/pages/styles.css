@@ -28,6 +28,11 @@ nav a {
     cursor: pointer;
 }
 
+@media screen and (max-width: 570px) {
+    nav a {
+        display: none;
+    }
+}
 nav a:hover {
     color: #bdf3b7;
     text-decoration: none;
