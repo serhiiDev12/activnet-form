@@ -53,6 +53,7 @@
     display: flex;
     gap: 20px;
     align-items: center;
+    border: none !important;
 }
 
 .step h3 {
@@ -96,6 +97,7 @@
     display: flex;
     flex-direction: column;
     align-items: center;
+    justify-content: center;
 }
 .form-flex-box {
     width: 100%;
@@ -105,6 +107,9 @@
 }
 .form {
     width: 30vw;
+    background: white;
+    border-radius: 12px;
+    padding: 20px;
 }
 .form h3 {
     font-weight: 500;

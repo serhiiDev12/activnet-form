@@ -772,6 +772,9 @@ body {
     flex-direction: column;
     gap: 20px;
     justify-content: center;
+    background: white;
+    border-radius: 12px;
+    padding: 20px;
 }
 
 .success-page {
