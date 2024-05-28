@@ -54,7 +54,7 @@ export default function MainPage() {
         setTimeout(() => {
             setShowLoading(false);
         }, 400)
-        navigate('/website-viewer');
+        navigate('/get-started');
     }
 
     const startDesignerInquiry = () => {

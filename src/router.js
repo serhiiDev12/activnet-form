@@ -10,11 +10,16 @@ import Designer from "./pages/Designer";
 import SuccessPage from "./pages/SuccessPage";
 import TemplateViewer from "./pages/TemplateViewer";
 import InfoForm from "./pages/InfoForm";
+import GetStarted from "./pages/GetStarted";
 
 export const router = createBrowserRouter([
     {
         path: "/",
         element: <MainPage />,
+    },
+    {
+        path: "/get-started",
+        element: <GetStarted />,
     },
     {
         path: "/website-viewer",

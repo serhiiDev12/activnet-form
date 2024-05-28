@@ -71,7 +71,7 @@ export default function Designer() {
 
     }
     const goHome = () => {
-        navigate('/')
+        navigate('/get-started')
     }
 
     const changeValue = (key, value) => {

@@ -68,7 +68,7 @@ export default function TemplateViewer() {
     }
 
     const goHome = () => {
-        navigate('/')
+        navigate('/get-started')
     }
 
     const next = () => {
