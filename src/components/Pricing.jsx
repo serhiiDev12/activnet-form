@@ -38,7 +38,7 @@ export default function Pricing(props) {
 
     return (
         <div id="#prices" className="pricing-an">
-            <h1>Prices</h1>
+            <h1>Prices & Plans</h1>
             <div className="pricing-flexbox">
                 {
                     prices.map(item => (
@@ -70,11 +70,13 @@ export default function Pricing(props) {
                                     </div>
                                 </div>
                             </div>
+                            <div className="become-client-form">
                             <button
                                 onClick={item.id === 1114 ? props.designer : props.start}
                                 disabled={item.title === "Development"}
                                 className={item.title === "Development" ? 'button-disabled' : ''}
                             >{item.title === "Development" ? 'You already have it!' : 'Get it now'}</button>
+                            </div>
                         </div>
 
                     ))

@@ -1,8 +1,9 @@
 import * as React from 'react';
 import { Box} from "@mui/material";
-import {useState} from "react";
+import { useState } from "react";
+import ScrollAnimation from 'react-animate-on-scroll';
+import "animate.css/animate.compat.css"
 import {ArrowForward} from "@mui/icons-material";
-import services from './services.svg'
 
 const servicesDetails = [
     {
@@ -40,39 +41,39 @@ const servicesDetails = [
 export default function ServicesAN(props) {
     const [selectedId, setSelectedId] = useState("web 1")
 
-    const setSelectedService = (id) => {
-        setSelectedId(id)
-    }
-
-    const getSelectedObject = () => {
-        return servicesDetails.find(item => item.id === selectedId)
-    }
-
     return (
         <div className="services-an">
             <div className="services-an-background">
                 <div className="services-sidebyside">
-                    <div className="services-logo">
-                        <img src={services} alt="" width={600}/>
-                    </div>
-                    <div className="service-margins">
-                        <h1>Services we provide will satisfy every business</h1>
-                        <p>We provide wide range of services related to your digital representation and business website
-                            delivery</p>
-                        <div className="services-an-flex">
-                            {
-                                servicesDetails.map(item =>
-                                    <Box key={item.id} className="service-an-item"
-                                         onClick={() => setSelectedService(item.id)}>
-                                        <h4>{item.title}</h4>
-                                    </Box>
-                                )
-                            }
+                    <ScrollAnimation animateIn='fadeInLeft' animatePreScroll={false} duration={1}>
+                        <div className="services-logo">
+                            <p style={{
+                                textTransform: "uppercase"
+                            }}>Services we provide will satisfy any client needs</p>
+                            <h1>Our <br/>Services</h1>
+                            <p>We provide wide range of services related to your digital representation and business
+                                website delivery</p>
                         </div>
-                    </div>
+                    </ScrollAnimation>
+                    <div className="divider-vertical"></div>
+                    <ScrollAnimation animateIn='fadeInRight' animatePreScroll={false} duration={1}>
+                        <div className="service-margins">
+                            <div className="services-an-flex">
+                                {
+                                    servicesDetails.map(item =>
+                                        <Box key={item.id} className="service-an-item">
+                                            <h1>{item.title}</h1>
+                                            <p>{item.description}</p>
+                                        </Box>
+                                    )
+                                }
+                            </div>
+                        </div>
+                    </ScrollAnimation>
                 </div>
-
-                <button onClick={props.start}>Become a client</button>
+                <div className="become-client-form">
+                    <button onClick={props.start}>Become a client</button>
+                </div>
             </div>
         </div>
     );

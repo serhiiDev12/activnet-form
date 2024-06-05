@@ -1,15 +1,16 @@
-.wrapper {}
+
 nav {
     background: none;
-    width: 75%;
-
+    width: 96%;
     gap: 33px;
     margin: auto;
     padding: 20px 40px;
     display: flex;
     position: fixed;
+    justify-content: center;
     align-items: center;
     top: 0;
+    backdrop-filter: blur(8px);
     z-index: 999;
     transition: 0.3s;
     border-radius: 0 0 18px 0;

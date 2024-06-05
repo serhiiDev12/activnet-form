@@ -7,16 +7,23 @@ import Loading from "./Loading";
 import template1 from "../components/Template1.png";
 import template2 from "../components/Template2.png";
 import template3 from "../components/Template3.png";
+import reduxLogo from '../components/service-images/redux.svg'
+import reactLogo from '../components/service-images/react.svg'
+import awsLogo from '../components/service-images/aws.svg'
+import jsLogo from '../components/service-images/js.svg'
+import tsLogo from '../components/service-images/ts.svg'
+import figmaLogo from '../components/service-images/figma.svg'
 import Header from "../components/HeaderAN";
 import ServicesAN from "../components/ServicesAN";
 import ChooseTemplate from "../components/ChooseTemplate";
 import Pricing from "../components/Pricing";
 import Faq from "../components/Faq";
 import Footer from "../components/Footer";
-import logoHeader from './header.svg'
+import logoHeader from '../components/logo.svg'
 import {CircularProgress, Dialog, DialogContent, TextField} from "@mui/material";
 import {Close, Done} from "@mui/icons-material";
 import {sendContactForm} from "../service";
+import Benefits from "../components/Benefits";
 
 export default function MainPage() {
     const [showLoading, setShowLoading] = useState(true);
@@ -79,18 +86,12 @@ export default function MainPage() {
 
     return (
         <div className="wrapper">
-            {
-                showLoading &&
-                <Loading />
-            }
             <header>
-                <nav style={{width: small ? "100%" : "", background: small ? "#282c34": "none"}}>
+                <nav>
                     <img className="activnet" src={logoHeader} alt="ActivNet" height={20}/>
                     <a href="#about">About</a>
                     <a href="#templates">Templates</a>
                     <a href="#prices">Pricing</a>
-
-                    {small && <button className="contact-us-button" onClick={() => setOpenForm(true)}>Contact Us</button>}
                 </nav>
             </header>
             <Dialog sx={{borderRadius: "12px"}} open={openContactForm} onClose={() => {
@@ -124,9 +125,36 @@ export default function MainPage() {
 
             </Dialog>
             <Header start={startWebsiteCreate} openPopover={openPopover}/>
+            <div className="technologies">
+                <div className="technology-item">
+                    <img src={reduxLogo} alt=""/>
+                    Redux
+                </div>
+                <div className="technology-item">
+                    <img src={reactLogo} alt=""/>
+                    React
+                </div>
+                <div className="technology-item">
+                    <img src={jsLogo} alt=""/>
+                    JavaScript
+                </div>
+                <div className="technology-item">
+                    <img src={awsLogo} alt=""/>
+                    AWS
+                </div>
+                <div className="technology-item">
+                    <img src={tsLogo} alt=""/>
+                    TypeScript
+                </div>
+                <div className="technology-item">
+                    <img src={figmaLogo} alt=""/>
+                    Figma
+                </div>
+            </div>
             <div className="map-section">
                 <ServicesAN start={startWebsiteCreate}/>
                 <ChooseTemplate start={startWebsiteCreate}/>
+                <Benefits />
                 <Pricing start={startWebsiteCreate} designer={startDesignerInquiry}/>
                 <Faq/>
                 <Footer />

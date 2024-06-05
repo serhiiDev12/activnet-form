@@ -5,6 +5,7 @@ import {TextField} from "@mui/material";
 import {useEffect, useState} from "react";
 import lightbulb from './lightbulb.svg'
 import logo from './logo.svg'
+import ScrollAnimation from "react-animate-on-scroll";
 
 const renderStuff = [
     {
@@ -29,36 +30,30 @@ const renderStuff = [
 
 export default function Header(props) {
 
-    const [email, emailChange] = useState("")
+    const [email, emailChange] = useState("");
+
+    const [show, setShow] = useState(false);
+
+    useEffect(() => {
+        setTimeout(() => {
+            setShow(true);
+        }, 10)
+    })
 
     return (
         <div id="about" className="main-page-header">
             <div className="header-img-format">
                 <div className="header-text">
-                    <button className="contact-buttom" onClick={() => props.openPopover("")}>CONTACT US</button>
                     <div className="h1-title">
-                        <h1>DESIGN.<br/> DEVELOPMENT.<br/> MAINTENANCE.<br/></h1>
+                        <h1 style={{color: show ? "white": "transparent"}}>UI DESIGN. WEB DEVELOPMENT. MAINTENANCE.</h1>
                     </div>
                     <div className="become-client">
-                        <h1>FREE CONSULTATION</h1>
-                        <p>Let's discuss best option for you</p>
+                        <h1 style={{color: show ? "white": "transparent"}}>GET YOUR WEBSITE NOW WITH ACTIVNET TECH</h1>
                         <div className="become-client-form">
-                            <input
-                                className="header-text-form"
-                                placeholder="Email"
-                                value={email}
-                                onChange={(e) => emailChange(e.target.value)}
-                            />
-                            <div
-                                onClick={() => props.openPopover(email)}
-                                className="header-text-form-button">
-                                <ArrowForward/>
-                            </div>
+                            <button>Try Free Templates</button>
+                            <button onClick={props.openPopover}>Contact Us</button>
                         </div>
                     </div>
-                </div>
-                <div className="lightbulb">
-                    <img src={lightbulb} alt=""/>
                 </div>
             </div>
         </div>

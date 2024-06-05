@@ -5,7 +5,7 @@ import {TreeItem} from "@mui/x-tree-view";
 export default function Faq() {
     return (
         <div className="faq">
-            <h1>FAQ</h1>
+            <h1>Frequently asked questions</h1>
             <SimpleTreeView className="faq-tree">
                 <TreeItem itemId="11" label="Will I be chaged with an aditional funds?" className="faq-tree-section">
                     <TreeItem itemId="grid-1" label="
