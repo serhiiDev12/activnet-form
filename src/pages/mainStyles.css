@@ -795,7 +795,6 @@ body {
     color: black;
 }
 .header-get-started {
-    background-image: url("./get-started.svg");
     width: 100%;
     background-position: center;
     background-size: cover;
