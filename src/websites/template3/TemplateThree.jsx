@@ -20,7 +20,7 @@ export default function TemplateThree(props) {
     }, [color])
 
     return (
-        <>
+        <div className="template-three">
             <NavBar/>
             <Header/>
             <ContactForm/>
@@ -29,6 +29,6 @@ export default function TemplateThree(props) {
             <Testimonials />
             <QuestionsForm/>
             <Footer/>
-        </>
+        </div>
     );
 }

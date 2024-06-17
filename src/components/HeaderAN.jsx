@@ -6,6 +6,7 @@ import {useEffect, useState} from "react";
 import lightbulb from './lightbulb.svg'
 import logo from './logo.svg'
 import ScrollAnimation from "react-animate-on-scroll";
+import {useNavigate} from "react-router-dom";
 
 const renderStuff = [
     {
@@ -30,6 +31,7 @@ const renderStuff = [
 
 export default function Header(props) {
 
+    const navigate = useNavigate();
     const [email, emailChange] = useState("");
 
     const [show, setShow] = useState(false);
@@ -50,7 +52,7 @@ export default function Header(props) {
                     <div className="become-client">
                         <h1 style={{color: show ? "white": "transparent"}}>GET YOUR WEBSITE NOW WITH ACTIVNET TECH</h1>
                         <div className="become-client-form">
-                            <button>Try Free Templates</button>
+                            <button onClick={() => navigate('/website-viewer')}>Try Free Templates</button>
                             <button onClick={props.openPopover}>Contact Us</button>
                         </div>
                     </div>

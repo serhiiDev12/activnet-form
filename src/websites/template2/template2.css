@@ -70,7 +70,9 @@ h6 {
     flex-direction: column;
     align-items: flex-start;
 }
-
+.template-two {
+    background: white;
+}
 .templatetwo-header-button {
     background-color: var(--primary-color);
     text-decoration: none;

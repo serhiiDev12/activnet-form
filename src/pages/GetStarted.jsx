@@ -1,6 +1,6 @@
 import * as React from 'react';
 import {ArrowBack, AutoFixHigh, WebStories} from "@mui/icons-material";
-import logoHeader from "./header.svg";
+import logoHeader from '../components/logo.svg'
 import {useNavigate} from "react-router-dom";
 
 export default function GetStarted() {
@@ -9,9 +9,9 @@ export default function GetStarted() {
     return (
         <div className="get-started">
             <header>
-                <nav style={{width: "100%", background: "#282c34"}}>
+                <nav>
                     <img className="activnet" src={logoHeader} alt="ActivNet" height={20}/>
-                    <a onClick={() => navigate('/')} className="back-nav"><ArrowBack />BACK</a>
+                    <a href="" onClick={() => navigate('/')}>BACK</a>
                 </nav>
             </header>
             <div className="header-get-started">

@@ -32,7 +32,7 @@ const Template2 = (props) => {
 
 
     return (
-        <>
+        <div className="template-two">
             {
                 showPortfolio &&
                 <PortfolioPopup
@@ -51,7 +51,7 @@ const Template2 = (props) => {
             <Testimonials/>
             <Location/>
             <Footer />
-        </>
+        </div>
     )
 }
 

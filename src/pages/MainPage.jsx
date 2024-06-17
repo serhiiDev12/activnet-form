@@ -20,7 +20,7 @@ import Pricing from "../components/Pricing";
 import Faq from "../components/Faq";
 import Footer from "../components/Footer";
 import logoHeader from '../components/logo.svg'
-import {CircularProgress, Dialog, DialogContent, TextField} from "@mui/material";
+import {Button, CircularProgress, Dialog, DialogContent, TextField} from "@mui/material";
 import {Close, Done} from "@mui/icons-material";
 import {sendContactForm} from "../service";
 import Benefits from "../components/Benefits";
@@ -74,7 +74,6 @@ export default function MainPage() {
 
     const openPopover = (email) => {
         setOpenForm(true);
-        setEmail(email)
     }
 
     const sendForm = async () => {
@@ -105,7 +104,7 @@ export default function MainPage() {
                                    onChange={(e) => setEmail(e.target.value)}/>
                         <TextField multiline rows={4} label="Message" value={message}
                                    onChange={(e) => setMessage(e.target.value)}/>
-                        <button className="contact-form-button" onClick={sendForm}>SEND</button>
+                        <Button onClick={sendForm}>SEND</Button>
                     </div>}
                     {
                         contactFormLoading && !success &&

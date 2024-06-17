@@ -15,6 +15,7 @@
 }
 .template-one {
     font-family: Libre Franklin;
+    color: white;
 }
 h3 {
     color: var(--primary-color);

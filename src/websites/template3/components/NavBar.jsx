@@ -5,12 +5,15 @@ import {useLocation, useNavigate, useParams} from "react-router-dom";
 import {useEffect, useState} from "react";
 
 export default function NavBar(props) {
+    const navigate = useNavigate()
+    const back = () => naviga
+
     return (
         <AppBar  position="fixed">
             <Toolbar>
                 <div className="templatetwo-nav">
                     <div className="templatetwo-navlogo">
-                        <h3 className="two-h3">DEMO</h3>
+                        <h3 className="two-h3" onClick={}>BACK</h3>
                     </div>
                     <div className="templatetwo-navlinks">
                         <a href="">Home</a>
